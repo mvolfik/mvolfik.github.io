@@ -1,0 +1,81 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+body {
+  font-family: "Open Sans", "Liberation Sans", "Arial", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+#location {
+  font-size: 1.4em;
+}
+
+#location svg {
+  height: 1em;
+}
+
+#logo {
+  max-height: 20em;
+}
+
+#skills {
+  padding-left: 0;
+  list-style: none;
+  position: unset !important;
+}
+
+.skill-circles .lower-layer * {
+  fill: #aaaaaa;
+}
+
+.skill-circles .upper-layer * {
+  fill: #267CB9;
+}
+
+.skill-circles {
+  height: 0.95em;
+}
+
+header h3, p, h4 {
+  margin-bottom: 0.6em;
+}
+
+code {
+  font-size: 0.93em;
+  margin: 0 0.2em;
+  background-color: #eee;
+}
+
+
+label[for=darkmode-cb] {
+  display: block;
+  position: absolute;
+  top: 1.5em;
+  right: 3em;
+  @media print {
+    display: none;
+  }
+}
+
+header, footer {
+  position: unset;
+}
+
+@media screen {
+  html.dark {
+    @import "dark_theme";
+  }
+}
+
+@media print {
+  footer {
+    display: none;
+  }
+  a:after {
+    content: " [" attr(href) "]";
+  }
+}

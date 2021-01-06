@@ -1,0 +1,38 @@
+title: Matěj Volf
+logo: "/images/me.jpg"
+location: Tábor, Czech republic
+description: |
+  High school student, Python programmer. Almost proficient with Flask, moderately
+  skilled with JavaScript, SQLAlchemy and Python in general.
+
+profile_links:
+  - url: https://github.com/mvolfik
+    text: GitHub
+  - url: https://www.linkedin.com/in/matej-volf/
+    text: LinkedIn
+  - url: https://mailhide.io/e/8adeL
+    text: Email
+
+skills:
+  - name: Flask
+    value: 5
+  - name: Python
+    value: 4.3
+  - name: JavaScript
+    value: 4
+  - name: RESTful APIs
+    value: 4
+  - name: Heroku
+    value: 4
+  - name: SQLAlchemy
+    value: 3.7
+  - name: Git
+    value: 3
+  - name: Linux
+    value: 3
+  - name: PostgreSQL
+    value: 2.7
+
+theme: jekyll-theme-minimal
+sass.sass_dir: _sass
+gtag: G-MVBYXVW526

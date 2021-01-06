@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    {% if site.gtag %}
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.gtag }}"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+
+          gtag('js', new Date());
+
+          gtag('config', '{{ site.gtag }}');
+        </script>
+    {% endif %}
+</head>
+<body>
+<label for="darkmode-cb"
+       title="The dark mode stylesheet was generated from light mode styles by darkreader.org. It's awesome, go check it out!">
+    <input type="checkbox" id="darkmode-cb"/> Dark mode</label>
+<div class="wrapper">
+    <header>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
+
+        <img id="logo" src="{{ site.logo | relative_url }}" alt="Logo"/>
+
+        <p id="location">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                      d="M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zm0 168c-23.2 0-42-18.8-42-42s18.8-42 42-42 42 18.8 42 42-18.8 42-42 42zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.94 14.86L160 448V214.92c-8.84-15.98-16.07-31.54-21.25-46.42L20.12 215.95zM288 359.67c-14.07 0-27.38-6.18-36.51-16.96-19.66-23.2-40.57-49.62-59.49-76.72v182l192 64V266c-18.92 27.09-39.82 53.52-59.49 76.72-9.13 10.77-22.44 16.95-36.51 16.95zm266.06-198.51L416 224v288l139.88-55.95A31.996 31.996 0 0 0 576 426.34V176.02c0-11.32-11.43-19.06-21.94-14.86z"></path>
+            </svg>
+            {{ site.location }}
+        </p>
+        <p id="bio">{{ site.description }}</p>
+
+        <p class="profile-links">
+            {% for link in site.profile_links %}
+                <a href="{{ link.url }}" target="_blank">{{ link.text }}</a>
+                {% unless forloop.last %}|{% endunless %}
+            {% endfor %}
+        </p>
+        <h3>Skills</h3>
+        <ul id="skills">
+            {% for skill in site.skills %}
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 1" class="skill-circles">
+                        <g class="lower-layer">
+                            <rect x="0.5" y="0.4" height="0.2" width="5"/>
+                            <circle cx="0.5" cy="0.5" r="0.5"/>
+                            <circle cx="1.75" cy="0.5" r="0.5"/>
+                            <circle cx="3.00" cy="0.5" r="0.5"/>
+                            <circle cx="4.25" cy="0.5" r="0.5"/>
+                            <circle cx="5.50" cy="0.5" r="0.5"/>
+                        </g>
+                        <mask id="cover{{ forloop.index }}">
+                            <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+                            <rect x="{{ skill.value | divided_by: 5.0 | times: 6 }}" y="0" width="100%" height="100%"
+                                  fill="black"/>
+                        </mask>
+                        <g mask="url(#cover{{ forloop.index }})" class="upper-layer">
+                            <rect x="0.5" y="0.4" height="0.2" width="5"/>
+                            <circle cx="0.5" cy="0.5" r="0.5"/>
+                            <circle cx="1.75" cy="0.5" r="0.5"/>
+                            <circle cx="3.00" cy="0.5" r="0.5"/>
+                            <circle cx="4.25" cy="0.5" r="0.5"/>
+                            <circle cx="5.50" cy="0.5" r="0.5"/>
+                        </g>
+                    </svg>
+                    {{ skill.name }}
+                </li>
+            {% endfor %}
+        </ul>
+    </header>
+    <section>
+
+        {{ content }}
+
+    </section>
+    <footer>
+        <p>
+            <small>
+                Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a>
+            </small>
+        </p>
+    </footer>
+</div>
+<script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+<script>
+  const cb = document.getElementById("darkmode-cb");
+  let stored = localStorage.getItem("darkmode")
+  let dark;
+  cb.checked = stored === null ? window.matchMedia('(prefers-color-scheme: dark)').matches : stored === "dark";
+  cbChangeHandler();
+
+  function cbChangeHandler() {
+    dark = cb.checked;
+    const v = dark ? "dark" : "light"
+    localStorage.setItem("darkmode", v);
+    document.documentElement.className = v;
+  }
+
+  cb.addEventListener("change", cbChangeHandler)
+</script>
+</body>
+</html>
