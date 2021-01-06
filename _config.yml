@@ -33,6 +33,7 @@ skills:
   - name: PostgreSQL
     value: 2.7
 
-theme: jekyll-theme-minimal
-sass.sass_dir: _sass
 gtag: G-MVBYXVW526
+
+remote_theme: pages-themes/minimal@25df166
+sass.sass_dir: _sass
