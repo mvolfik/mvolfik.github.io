@@ -28,6 +28,11 @@ lockdown wave struck, but then I got stuck on designing the frontend, and Bakal√
 bringing to the table, so the work on this stopped. But I'm still proud of the API
 abstractions I pulled off and would like to finish this one day&hellip;
 
+#### [EYP Calls scraper](https://github.com/mvolfik/eyp-calls)
+
+A scraper + simple presentation of participant calls from the European Youth Parliament
+members platform. Utilizing Python Scrapy + Cloudflare Workers
+
 #### Finding ways how to host stuff for free
 
 Seriously. Bodge together some Heroku, Cloudflare reverse-proxy + workers free tiers,
@@ -60,10 +65,6 @@ DNS key value storage concept got shared on HN recently, and I got interested so
 I started implementing a client which allows storing JSON objects, distributing the keys
 into trees and splitting values to bypass length limits. Stay tuned!
 
-#### [EYP Calls scraper](https://github.com/mvolfik/eyp-calls)
-
-A scraper + simple presentation of participant calls from the European Youth Parliament
-members platform. Utilizing Python Scrapy + Cloudflare Workers
 
 #### [Rickroll disguiser](https://newsfeedmerge.herokuapp.com/)
 
