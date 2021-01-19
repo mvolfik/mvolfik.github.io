@@ -33,6 +33,16 @@ abstractions I pulled off and would like to finish this one day&hellip;
 A scraper + simple presentation of participant calls from the European Youth Parliament
 members platform. Utilizing Python Scrapy + Cloudflare Workers
 
+#### [Starlette Websockets demo](https://github.com/mvolfik/starlette-websockets-demo)
+
+A a demo of using the Python [Starlette](https://github.com/encode/starlette)
+framework for websockets-based server to client notifications. The server can dynamically
+create and delete channels, which are advertised to the connected clients. The clients
+can then individually subscribe to each channel and receive the notifications. I created
+this to learn Starlette and Websockets, as I'm planning to use a similar architecture
+for a project I'm planning to do.
+
+
 #### Finding ways how to host stuff for free
 
 Seriously. Bodge together some Heroku, Cloudflare reverse-proxy + workers free tiers,
