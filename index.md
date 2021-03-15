@@ -13,6 +13,10 @@ frameworks, TypeScript etc. I'm not a good frontend designer either, my UIs look
 
 ### Projects
 
+#### [Python mailmerge](https://github.com/mvolfik/mailmerge)
+
+A simple but fully functional mailmerge script written in Python using Jinja and Markdown.
+
 #### [Bakatasklist](https://github.com/mvolfik/Bakalari-homework-tasklist)
 
 A simple web app for better management of homework. This rushed project is not usable
