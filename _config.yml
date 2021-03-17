@@ -37,3 +37,6 @@ gtag: G-MVBYXVW526
 
 remote_theme: pages-themes/minimal@25df166
 sass.sass_dir: _sass
+
+include:
+  - .well-known
