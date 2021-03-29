@@ -73,13 +73,6 @@ see some of my more algorithmic code, reach out, I'll be happy to show you some 
 
 [1]: https://github.com/mvolfik/homework-fml/blob/6b149c/homework_fml/email.py#L23
 
-#### [WIP] [DNSKV](https://dnskv.com) _"deep JSON"_ storage client
-
-DNS key value storage concept got shared on HN recently, and I got interested so much that
-I started implementing a client which allows storing JSON objects, distributing the keys
-into trees and splitting values to bypass length limits. Stay tuned!
-
-
 #### [Rickroll disguiser](https://newsfeedmerge.herokuapp.com/)
 
 Probably my first complete project. A simple web app that lets you create URLs with fake
