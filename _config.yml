@@ -20,18 +20,18 @@ skills:
     value: 4.3
   - name: JavaScript
     value: 4
-  - name: RESTful APIs
+  - name: SvelteJS
     value: 4
   - name: Heroku
-    value: 4
+    value: 3.5
   - name: SQLAlchemy
-    value: 3.7
+    value: 3.5
   - name: Git
     value: 3
   - name: Linux
     value: 3
   - name: PostgreSQL
-    value: 2.7
+    value: 3
 
 gtag: G-MVBYXVW526
 

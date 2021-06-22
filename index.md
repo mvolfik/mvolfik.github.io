@@ -3,13 +3,15 @@
 ---
 
 Hello there! My name is Matěj and I'm from Tábor, Czech republic, where I'm studying 3rd
-grade of high school. **I'm currently looking for an internship or a similar part-time job
+grade of high school. **I'm currently looking for an internship or a part-time job
 I could do while studying.** Here you can find a showcase of what I can do and what I've
 done.
 
-You can see my preferred technologies in the column below my photo. Even though I'm
-experienced with frontend JavaScript and AJAX, I have no experience with frontend
-frameworks, TypeScript etc. I'm not a good frontend designer either, my UIs look terrible.
+You can see my preferred technologies in the column below my photo. Until quite recently
+I considered Python my strongest point, but in March I learned Svelte and frontend became
+a pleasure again. I still don't know the big frameworks like React or Vue, though I'd
+still like to learn them one day. However, I'm a a terrible frontend designer, and not
+even Bootstrap or Bulma helped me.
 
 ### Projects
 
