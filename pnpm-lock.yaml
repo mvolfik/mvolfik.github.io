@@ -6,6 +6,7 @@ specifiers:
   "@babel/core": ^7.17.10
   "@fontsource/open-sans": ^4.5.8
   astro: "=1.0.0-beta.27"
+  fast-glob: ^3.2.11
   prettier: ^2.6.2
   prettier-plugin-astro: "=0.1.0-next.4"
   sass: ^1.51.0
@@ -17,6 +18,7 @@ devDependencies:
   "@babel/core": 7.17.10
   "@fontsource/open-sans": 4.5.8
   astro: 1.0.0-beta.27_sass@1.51.0
+  fast-glob: 3.2.11
   prettier: 2.6.2
   prettier-plugin-astro: 0.1.0-next.4
   sass: 1.51.0
