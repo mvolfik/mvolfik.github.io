@@ -8,7 +8,7 @@ export interface Props {
   title: string;
   image: string;
   summary: string;
-  links: Array<{ name: string; href: string; popup?: boolean }>;
+  links: Array<{ name: string; href: string }>;
   skills: Record<string, number>;
 }
 
@@ -42,12 +42,8 @@ const props = Astro.props.content as Props;
 
       <p class="profile-links">
         {intersperse(
-          props.links.map(({ name, href, popup }) => (
-            <a
-              target="_blank"
-              href={href}
-              onclick={`if (${!!popup}) {window.open('${href}','popup','width=580,height=635'); return false;}`}
-            >
+          props.links.map(({ name, href }) => (
+            <a target="_blank" href={href}>
               {name}
             </a>
           )),
@@ -152,6 +148,12 @@ const props = Astro.props.content as Props;
     </footer>
   </div>
 </BaseLayout>
+
+<script>
+  document.querySelector("a[href^='https://mailhide.io']").href = atob(
+    "bWFpbHRvOm1hdC52b2xmaWtAZ21haWwuY29t"
+  );
+</script>
 
 <style lang="scss">
   @use "../lib/tags.scss";
