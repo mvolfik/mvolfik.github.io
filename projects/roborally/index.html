@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en-US" class="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RoboRally</title>
+    <link rel="canonical" href="https://mvolfik.github.io/">
+    <meta name="description" content="As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.
+">
+    <meta property="og:title" content="RoboRally">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:description" content="As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.
+">
+    <meta property="og:url" content="https://mvolfik.github.io/">
+    <meta property="og:site_name" content="Matěj Volf">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta property="twitter:title" content="RoboRally">
+    
+  <link rel="stylesheet" href="/assets/asset.3df98b92.css"></link>
+<link rel="stylesheet" href="/assets/asset.df5c68ee.css"></link><style>astro-root, astro-fragment { display: contents; }</style><script type="module" src="/entry.fab9ab3f5.js" astro-script="/projects/roborally/script-0"></script>
+<script type="module" data-astro-component-hydration astro-script="/projects/roborally/script-1">import setup from '../../entry.1d451954.js';
+import 'data:text/javascript;charset=utf-8,//[no before-hydration script]';
+setup("1UsboN", {name:"DarkModeSwitch",value: true}, async () => {
+  const [{ default: Component }, { default: hydrate }] = await Promise.all([import("../../entry.b710a44f.js"), import("../../entry.1d962987.js")]);
+  return (el, children) => hydrate(el)(Component, {}, children);
+
+});
+</script>
+</head>
+  <body>
+    <astro-root uid="1UsboN"></astro-root>
+    <div class="wrapper astro-3Q67C62F">
+    <div class="banner astro-3Q67C62F">
+        <img src="/assets/asset.bd21af44.png" alt="Cover image" class="astro-3Q67C62F">
+        <h1 class="astro-3Q67C62F">RoboRally</h1>
+      </div>
+    <main class="astro-3Q67C62F">
+      <p class="noprint astro-3Q67C62F"><a href="/" class="astro-3Q67C62F">&larr; back to homepage</a></p>
+      <p class="metadata astro-3Q67C62F">
+        Tags: <span class="tags astro-3Q67C62F">
+          <span class="astro-3Q67C62F">game</span>, <span class="astro-3Q67C62F">web</span>, <span class="astro-3Q67C62F">Svelte</span>, <span class="astro-3Q67C62F">Rust</span>, <span class="astro-3Q67C62F">WebAssembly</span>
+        </span>
+      </p>
+      <p class="metadata astro-3Q67C62F">Timespan: March 2022</p>
+      <p class="metadata astro-3Q67C62F">
+        <a target="_blank" href="https://roborally-mvolf.herokuapp.com/" class="astro-3Q67C62F">
+              Play the game online
+            </a> | <a target="_blank" href="https://github.com/mvolfik/roborally/" class="astro-3Q67C62F">
+              View repository
+            </a>
+      </p>
+      <p class="astro-3Q67C62F">As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.
+</p>
+      <p>Roborally is a turn-based strategic board game. Each player controls one robot, which moves around a factory. The goal of each player is to complete the game course by visiting each of the checkpoints in specified order. Players control the robots by “programming” movement cards into five registers. However, these moves are then executed by all players at once. Moreover, after each move register, various board elements activate and further move and rotate the robots. And order matters - when two robots collide, they push each other and chaos ensues.</p><p>This project was a great experience. Having learned Rust during Advent of Code, I enjoyed solidifying my skills by writing a full project with it. I was also quite happy that this project required more focus on actual game logic, and I didn’t have to work on the visual frontend that much (even though I still ended up bikeshedding the UI slide-in/out animations :) )</p>
+    </main>
+    <footer class="noprint astro-3Q67C62F">
+      <p class="astro-3Q67C62F">
+        <small class="astro-3Q67C62F">
+          Powered by <a href="https://astro.build/" class="astro-3Q67C62F">Astro</a>; Hosted on GitHub
+          Pages
+        </small>
+      </p>
+    </footer>
+  </div>
+  </body></html>
+
+
