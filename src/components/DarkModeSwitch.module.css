@@ -1,0 +1,23 @@
+.switchLabel {
+  display: block;
+  position: absolute;
+  top: 1.5em;
+  right: 3em;
+  z-index: 99;
+  background-color: var(--bg-lightly-transparent);
+  color: var(--fg-high-contrast);
+  padding: 0.3em 0.6em 0.3em 0.3em;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+@media not print {
+  :global(html.dark) .switchLabel {
+    color: #fff;
+  }
+}
+@media not screen {
+  .switchLabel {
+    display: none;
+  }
+}

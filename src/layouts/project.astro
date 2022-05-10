@@ -1,0 +1,101 @@
+---
+import BaseLayout from "./Base.astro";
+import getAsset from "../assets/";
+import { intersperse } from "../lib/utils.ts";
+
+export interface Props {
+  name: string;
+  image?: string;
+  links: Array<{ name: string; href: string }>;
+  read_more?: boolean;
+  timespan: string;
+  ordering_value: number;
+  tags: Array<string>;
+  description: string;
+}
+const props = Astro.props.content as Props;
+---
+
+<BaseLayout title={props.name} summary={props.description}>
+  <div class="wrapper">
+    {props.image ? (
+      <div class="banner">
+        <img src={getAsset(props.image)} alt="Cover image" />
+        <h1>{props.name}</h1>
+      </div>
+    ) : (
+      <h1>{props.name}</h1>
+    )}
+    <main>
+      <p class="noprint"><a href="/">&larr; back to homepage</a></p>
+      <p class="metadata">
+        Tags: <span class="tags">
+          {intersperse(
+            props.tags.map((tag) => <span>{tag}</span>),
+            ", "
+          )}
+        </span>
+      </p>
+      <p class="metadata">Timespan: {props.timespan}</p>
+      <p class="metadata">
+        {intersperse(
+          props.links.map(({ name, href }) => (
+            <a target="_blank" href={href}>
+              {name}
+            </a>
+          )),
+          " | "
+        )}
+      </p>
+      {props.description.split(/\n\w*\n/).map((p) => <p>{p}</p>)}
+      <slot></slot>
+    </main>
+    <footer class="noprint">
+      <p>
+        <small>
+          Powered by <a href="https://astro.build/">Astro</a>; Hosted on GitHub
+          Pages
+        </small>
+      </p>
+    </footer>
+  </div>
+</BaseLayout>
+
+<style lang="scss">
+  @use "../lib/tags.scss";
+  .wrapper {
+    max-width: 50em;
+    margin: 0 auto;
+  }
+  .banner {
+    margin: calc(-1 * var(--outer-top-margin)) calc(-1 * var(--outer-margin))
+      1em;
+    height: min(50vh, 20em);
+    position: relative;
+
+    h1 {
+      position: absolute;
+      left: 50%;
+      top: 55%;
+      transform: translate(-50%, -50%);
+      background-color: var(--bg-lightly-transparent);
+      color: var(--fg-high-contrast);
+      font-variant: small-caps;
+      padding: 0.6em 1em;
+      border-radius: 0.1em;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .metadata {
+    font-size: 1.15em;
+  }
+  .tags {
+    @include tags.tags;
+  }
+</style>

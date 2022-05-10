@@ -1,0 +1,127 @@
+/*
+                        _______
+                       /       \
+                      .==.    .==.
+                     ((  ))==((  ))
+                    / "=="    "=="\
+                   /____|| || ||___\
+       ________     ____    ________  ___    ___
+       |  ___  \   /    \   |  ___  \ |  |  /  /
+       |  |  \  \ /  /\  \  |  |  \  \|  |_/  /
+       |  |   )  /  /__\  \ |  |__/  /|  ___  \
+       |  |__/  /  ______  \|  ____  \|  |  \  \
+_______|_______/__/ ____ \__\__|___\__\__|___\__\____
+|  ___  \ |  ____/ /    \   |  ___  \ |  ____|  ___  \
+|  |  \  \|  |___ /  /\  \  |  |  \  \|  |___|  |  \  \
+|  |__/  /|  ____/  /__\  \ |  |   )  |  ____|  |__/  /
+|  ____  \|  |__/  ______  \|  |__/  /|  |___|  ____  \
+|__|   \__\____/__/      \__\_______/ |______|__|   \__\
+                https://darkreader.org
+*/
+/* User-Agent Style */
+@media not print {
+  html.dark {
+    background-color: #090b0d !important;
+
+    &,
+    body,
+    input,
+    textarea,
+    select,
+    button {
+      background-color: #090b0d !important;
+      border-color: #675f52 !important;
+      color: #e0dedb !important;
+    }
+    a {
+      color: #2586f7 !important;
+    }
+    table {
+      border-color: #474e52 !important;
+    }
+    ::placeholder {
+      color: #a8a197 !important;
+    }
+    input:-webkit-autofill,
+    textarea:-webkit-autofill,
+    select:-webkit-autofill {
+      background-color: #484e00 !important;
+      color: #e0dedb !important;
+    }
+    ::-webkit-scrollbar {
+      background-color: #121516 !important;
+      color: #a19a8e !important;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #383d40 !important;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #4a5256 !important;
+    }
+    ::-webkit-scrollbar-thumb:active {
+      background-color: #3b4144 !important;
+    }
+    ::-webkit-scrollbar-corner {
+      background-color: #090b0d !important;
+    }
+    * {
+      scrollbar-color: #121516 #383d40 !important;
+    }
+    ::selection {
+      background-color: #0040a0 !important;
+      color: #e0dedb !important;
+    }
+    ::-moz-selection {
+      background-color: #0040a0 !important;
+      color: #e0dedb !important;
+    }
+    ::placeholder {
+      opacity: 0.5 !important;
+    }
+    /* Modified CSS */
+    .skills > svg .lower {
+      fill: rgb(193, 189, 182) !important;
+    }
+    .skills > svg .upper {
+      fill: rgb(88, 238, 98) !important;
+    }
+    .tags > span:nth-of-type(n) {
+      color: #63ec05 !important;
+    }
+    .tags > span:nth-of-type(2n + 1) {
+      color: #24b2ff !important;
+    }
+    .tags > span:nth-of-type(3n + 1) {
+      color: #f446d7 !important;
+    }
+    h1 {
+      color: rgb(202, 198, 192) !important;
+    }
+    h2,
+    h3 {
+      color: rgb(187, 182, 173) !important;
+    }
+    h4,
+    h5,
+    h6 {
+      color: rgb(176, 170, 161) !important;
+    }
+    a {
+      color: rgb(70, 153, 211) !important;
+      text-decoration-color: currentcolor !important;
+    }
+    a:hover,
+    a:focus {
+      color: rgb(85, 193, 247) !important;
+    }
+    a:hover small {
+      color: rgb(146, 137, 125) !important;
+    }
+    body {
+      background-color: rgb(9, 11, 13) !important;
+      --bg-lightly-transparent: #090b0daa !important;
+      color: rgb(168, 162, 152) !important;
+      --fg-high-contrast: #f0eae0 !important;
+    }
+  }
+}

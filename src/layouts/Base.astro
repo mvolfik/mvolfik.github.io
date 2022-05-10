@@ -1,0 +1,38 @@
+---
+import "@fontsource/open-sans/400.css";
+import "@fontsource/open-sans/700.css";
+import DarkModeSwitch from "../components/DarkModeSwitch.tsx";
+import "./global.scss";
+
+export interface Props {
+  title: string;
+  summary: string;
+}
+const props = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en-US" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{props.title}</title>
+    <link rel="canonical" href="https://mvolfik.github.io/" />
+    <meta name="description" content={props.summary} />
+    <meta property="og:title" content={props.title} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:description" content={props.summary} />
+    <meta property="og:url" content="https://mvolfik.github.io/" />
+    <meta property="og:site_name" content="Matěj Volf" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content={props.title} />
+    <script>
+      import "../lib/tracker.ts";
+    </script>
+  </head>
+  <body>
+    <DarkModeSwitch client:only />
+    <slot></slot>
+  </body>
+</html>
