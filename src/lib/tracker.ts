@@ -5,16 +5,17 @@ function sendEvent(name: string, props?: Record<string, string>) {
   )
     return;
 
+  const payload = {
+    name,
+    url: window.location.href,
+    domain: "mvolfik.github.io",
+    referrer: document.referrer || null,
+    screen_width: window.innerWidth,
+  };
+  if (props) payload.props = JSON.stringify(props);
   navigator.sendBeacon(
     "https://an.evavolfova.cz/api/event",
-    JSON.stringify({
-      name,
-      url: window.location.href,
-      domain: window.location.hostname,
-      referrer: document.referrer || null,
-      screen_width: window.innerWidth,
-      props,
-    })
+    JSON.stringify(payload)
   );
 }
 
