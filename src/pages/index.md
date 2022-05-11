@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/index.astro
 title: Matěj Volf – Portfolio
-image: me.jpg
+image: /src/assets/me.jpg
 summary: |
   High-school student, programmer in Python, JavaScript and Rust. Experienced with
   all (except the most low-level) parts of the stack, including SQL, Docker, Git and Linux.

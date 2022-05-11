@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/project.astro
 name: RoboRally
-image: roborally.png
+image: /src/assets/roborally.png
 links:
   - name: Play the game online
     href: https://roborally-mvolf.herokuapp.com/

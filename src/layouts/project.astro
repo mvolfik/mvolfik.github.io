@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "./Base.astro";
-import getAsset from "../assets/";
 import { intersperse } from "../lib/utils.ts";
+import { Picture } from "astro-imagetools/components";
 
 export interface Props {
   name: string;
@@ -20,7 +20,14 @@ const props = Astro.props.content as Props;
   <div class="wrapper">
     {props.image ? (
       <div class="banner">
-        <img src={getAsset(props.image)} alt="Cover image" />
+        <Picture
+          src={props.image}
+          alt="Cover image"
+          format={["webp"]}
+          loading="eager"
+          layout="fill"
+          sizes="(min-width: 48.6em ) 48.6em, 100vw"
+        />
         <h1>{props.name}</h1>
       </div>
     ) : (
@@ -75,6 +82,7 @@ const props = Astro.props.content as Props;
 
     h1 {
       position: absolute;
+      z-index: 5;
       left: 50%;
       top: 55%;
       transform: translate(-50%, -50%);
@@ -83,12 +91,6 @@ const props = Astro.props.content as Props;
       font-variant: small-caps;
       padding: 0.6em 1em;
       border-radius: 0.1em;
-    }
-
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
     }
   }
 
