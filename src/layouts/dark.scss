@@ -85,15 +85,6 @@ _______|_______/__/ ____ \__\__|___\__\__|___\__\____
     .skills > svg .upper {
       fill: rgb(88, 238, 98) !important;
     }
-    .tags > span:nth-of-type(n) {
-      color: #63ec05 !important;
-    }
-    .tags > span:nth-of-type(2n + 1) {
-      color: #24b2ff !important;
-    }
-    .tags > span:nth-of-type(3n + 1) {
-      color: #f446d7 !important;
-    }
     h1 {
       color: rgb(202, 198, 192) !important;
     }
@@ -122,6 +113,9 @@ _______|_______/__/ ____ \__\__|___\__\__|___\__\____
       --bg-lightly-transparent: #090b0daa !important;
       color: rgb(168, 162, 152) !important;
       --fg-high-contrast: #f0eae0 !important;
+      --tag-1: #63ec05 !important;
+      --tag-2: #24b2ff !important;
+      --tag-3: #f446d7 !important;
     }
   }
 }

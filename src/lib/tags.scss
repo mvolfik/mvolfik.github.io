@@ -1,17 +1,52 @@
-@mixin tags {
+@use "sass:math";
+@use "sass:list";
+
+body {
+  --tag-1: #099812;
+  --tag-2: #096698;
+  --tag-3: #980980;
+}
+
+@function permutations($sourcelist) {
+  @if list.length($sourcelist) == 0 {
+    @return [[]];
+  }
+  $permuts: ();
+  @for $i from 1 through list.length($sourcelist) {
+    $remainder: ();
+    @for $j from 1 through list.length($sourcelist) {
+      @if $j != $i {
+        $remainder: list.append($remainder, list.nth($sourcelist, $j));
+      }
+    }
+    @each $remperm in permutations($remainder) {
+      $permuts: list.append(
+        $permuts,
+        list.append($remperm, list.nth($sourcelist, $i))
+      );
+    }
+  }
+  @return $permuts;
+}
+
+$colors-permutations: permutations([var(--tag-1), var(--tag-2), var(--tag-3) ]);
+
+@mixin tags($n: 0) {
+  $permut: list.nth($colors-permutations, ($n % 6) + 1);
+
   font-weight: normal;
   font-variant: small-caps;
   margin: 0 0.5em;
 
   & > span {
     &:nth-of-type(1n) {
-      color: #099812;
+      color: list.nth($permut, 3);
     }
     &:nth-of-type(2n + 1) {
-      color: #096698;
+      color: list.nth($permut, 1);
     }
     &:nth-of-type(3n + 1) {
-      color: #980980;
+      color: list.nth($permut, 2);
     }
   }
 }

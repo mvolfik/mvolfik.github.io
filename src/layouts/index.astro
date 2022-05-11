@@ -185,15 +185,18 @@ const props = Astro.props.content as Props;
     }
   }
 
-  .tags,
-  .timespan {
-    white-space: nowrap;
-  }
+  main h4 {
+    .tags,
+    .timespan {
+      white-space: nowrap;
+    }
 
-  .tags {
-    @include tags.tags;
+    @for $i from 0 to 6 {
+      &:nth-of-type(6n + #{$i}) .tags {
+        @include tags.tags($i);
+      }
+    }
   }
-
   /* layout things */
   div.wrapper {
     display: grid;
