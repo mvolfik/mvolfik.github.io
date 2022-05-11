@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/mvolfik
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://mvolfik.github.io
+  * I am mvolfik (https://keybase.io/mvolfik) on keybase.
+  * I have a public key ASDDaXK1Eg2w4eURSQ3GtP_eu8u4TFM637ckRfvRJg5GZgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120c36972b5120db0e1e511490dc6b4ffdebbcbb84c533adfb72445fbd1260e46660a",
+      "host": "keybase.io",
+      "kid": "0120c36972b5120db0e1e511490dc6b4ffdebbcbb84c533adfb72445fbd1260e46660a",
+      "uid": "d00aa57ae6ea49701d259b191471b919",
+      "username": "mvolfik"
+    },
+    "merkle_root": {
+      "ctime": 1615975312,
+      "hash": "21e3fd5f925d360cfc4b17eacb785f276d4a39b11fb19f908f729b50d3314027300cb83aca10ca60fd13175e7a315745f485a551df3e451d3a6c3818794a7a26",
+      "hash_meta": "256192ee32dd5c2a9a48122371a7bf79cc5a7b13ec520d532ab2a6d912806ab5",
+      "seqno": 19395772
+    },
+    "service": {
+      "entropy": "/530TeBpZwEzMQoYQDq25I79",
+      "hostname": "mvolfik.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.1"
+  },
+  "ctime": 1615975378,
+  "expire_in": 504576000,
+  "prev": "8c19985c22d7f666c6eacc35cbe2d215edad1c33ccb41e91fb6427b9676d9ece",
+  "seqno": 24,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgw2lytRINsOHlEUkNxrT/3rvLuExTOt+3JEX70SYORmYKp3BheWxvYWTESpcCGMQgjBmYXCLX9mbG6sw1y+LSFe2tHDPMtB6R+2QnuWdtns7EIEJmieEkzreTbU3Rn6Unm34gwTBoZpHrO8Uh50YfijqGAgHCo3NpZ8RAxDlFoxSuE3QY4f1ovjaV2eqike2SAkklhlshKloIu14+LDhCIgQ0REsETddiV8O2+73dIyIFP2/ZpcsQK5meBKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJ/aQyBh/yOVcKpQwAPA2iqjXa/rKr3ZKgeTCr6O5ShGo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mvolfik
+
+==================================================================
