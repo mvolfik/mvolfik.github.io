@@ -17,26 +17,26 @@ skills:
   Python: 4
   Heroku: 3.5
   Rust: 3.3
+  Docker: 3.3
   SolidJS: 3
   Git: 3
   Linux: 3
   PostgreSQL: 3
-  Docker: 3
   SQLAlchemy: 3
 ---
 
 Hello! My name is Matěj and I'm from Tábor, Czech Republic. This May, I'm graduating
 from high school. After that, I'm going to continue my studies of Computer Science at
-the Faculty of Mathematics and Physics at Charles' University in Prague. **I'll be happy
+the Faculty of Mathematics and Physics at Charles University in Prague. **I'll be happy
 to hear about job opportunities suitable for my skills and time availability** (I'll be a
 college student starting in October).
 
-In this single-page portfolio you can find a showcase of what I can do and what I've done.
-I don't have any _"real"_ software engineering work experience, so it's hard for me to
-estimate how my coding skills stand in comparison with the outside world. But I'm able to
-participate in technical disussions, and made a few minor contributions to various
-open-source projects. You can see a breakdown of my preferred technologies and how
-confident I am in working with them in the column on the left.
+Here you can find a showcase of what I can do and what I've done. I don't have any
+_"real"_ software engineering work experience, so it's hard for me to estimate how my
+coding skills stand in comparison with the outside world. But I'm able to participate
+in technical disussions, and made a few minor contributions to various open-source
+projects. You can see a breakdown of my preferred technologies and how confident I am
+in working with them in the column on the left.
 
 ### My story & history of used tech
 
