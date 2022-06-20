@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bakatasklist</title>
     <link rel="canonical" href="https://mvolfik.github.io/">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
     <meta name="description" content="A web app for better management of homework.
 
 During the first wave of COVID-19 lockdowns in March 2020, homeschooling for many students at my school became a mess. Teachers were assigning us homework using Bakaláři (system commonly used by Czech schools), but the program worked with completely different assumptions and absolutely wasn't prepared for homeschooling. Therefore I created Bakatasklist to allow importing assignments, viewing them in a sortable table and manually marking finished/unfinished assignments.
@@ -24,19 +25,11 @@ Unfortunately, the API I used for importing homework was replaced a few months l
     <meta name="twitter:card" content="summary">
     <meta property="twitter:title" content="Bakatasklist">
     
-  <link rel="stylesheet" href="/assets/asset.d6109893.css"></link>
-<link rel="stylesheet" href="/assets/asset.df5c68ee.css"></link><style>astro-root, astro-fragment { display: contents; }</style><script type="module" src="/entry.42ef49673.js" astro-script="/projects/bakatasklist/script-0"></script>
-<script type="module" data-astro-component-hydration astro-script="/projects/bakatasklist/script-1">import setup from '../../entry.1d451954.js';
-import 'data:text/javascript;charset=utf-8,//[no before-hydration script]';
-setup("1UsboN", {name:"DarkModeSwitch",value: true}, async () => {
-  const [{ default: Component }, { default: hydrate }] = await Promise.all([import("../../entry.b710a44f.js"), import("../../entry.1d962987.js")]);
-  return (el, children) => hydrate(el)(Component, {}, children);
-
-});
-</script>
+  <link rel="stylesheet" href="/assets/asset.dc25f5d7.css" />
+<link rel="stylesheet" href="/assets/asset.2673fc7f.css" /><style>astro-island, astro-fragment { display: contents; }</style><script type="module" src="/entry.70e67e9d.js"></script>
 </head>
   <body>
-    <astro-root uid="1UsboN"></astro-root>
+    <script>(self.Astro=self.Astro||{}).only=a=>{(async()=>await(await a())())()};var o;{const a={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,e)=>{if(t===""||!Array.isArray(e))return e;const[r,s]=e;return r in a?a[r](s):void 0};customElements.get("astro-island")||customElements.define("astro-island",(o=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;let e=null,r=this.querySelector("astro-fragment");if(r==null&&this.hasAttribute("tmpl")){let i=this.querySelector("template[data-astro-template]");i&&(e=i.innerHTML,i.remove())}else r&&(e=r.innerHTML);const s=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,s,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}async connectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const e=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const r=this.getAttribute("renderer-url"),[s,{default:i}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]);return this.Component=s[this.getAttribute("component-export")||"default"],this.hydrator=i,this.hydrate},e,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},o.observedAttributes=["props"],o))}</script><astro-island uid="Z1VRcWB" component-url="/entry.1ed9b12a.js" component-export="default" renderer-url="/entry.8f4a97b1.js" props="{}" ssr="" client="only" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;DarkModeSwitch&quot;,&quot;value&quot;:true}"></astro-island>
     <div class="wrapper astro-27MHQCEU">
     <h1 class="astro-27MHQCEU">Bakatasklist</h1>
     <main class="astro-27MHQCEU">
@@ -68,5 +61,4 @@ setup("1UsboN", {name:"DarkModeSwitch",value: true}, async () => {
     </footer>
   </div>
   </body></html>
-
 

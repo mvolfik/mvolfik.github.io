@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ingress tools</title>
     <link rel="canonical" href="https://mvolfik.github.io/">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
     <meta name="description" content="Ingress is an augmented-reality GPS game, an ever-lasting battle of two factions. The game provides an online real-time game map, and each faction develops its own, private set of tools that operate on the game data and facilitate planning and monitoring operations. One the tools I created helps with preparing efficient game plans.
 
 For tactical advantage, the code isn't public, but I'll be happy to present some parts of it if you reach out.
@@ -20,39 +21,32 @@ For tactical advantage, the code isn't public, but I'll be happy to present some
     <meta name="twitter:card" content="summary">
     <meta property="twitter:title" content="Ingress tools">
     
-  <link rel="stylesheet" href="/assets/asset.d6109893.css"></link>
-<link rel="stylesheet" href="/assets/asset.df5c68ee.css"></link><style>astro-root, astro-fragment { display: contents; }</style><script type="module" src="/entry.42ef49672.js" astro-script="/projects/ingress-tools/script-0"></script>
-<script type="module" data-astro-component-hydration astro-script="/projects/ingress-tools/script-1">import setup from '../../entry.1d451954.js';
-import 'data:text/javascript;charset=utf-8,//[no before-hydration script]';
-setup("1UsboN", {name:"DarkModeSwitch",value: true}, async () => {
-  const [{ default: Component }, { default: hydrate }] = await Promise.all([import("../../entry.b710a44f.js"), import("../../entry.1d962987.js")]);
-  return (el, children) => hydrate(el)(Component, {}, children);
-
-});
-</script>
+  <link rel="stylesheet" href="/assets/asset.dc25f5d7.css" />
+<link rel="stylesheet" href="/assets/asset.2673fc7f.css" /><style>astro-island, astro-fragment { display: contents; }</style><script type="module" src="/entry.70e67e9d.js"></script>
 </head>
   <body>
-    <astro-root uid="1UsboN"></astro-root>
+    <script>(self.Astro=self.Astro||{}).only=a=>{(async()=>await(await a())())()};var o;{const a={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,e)=>{if(t===""||!Array.isArray(e))return e;const[r,s]=e;return r in a?a[r](s):void 0};customElements.get("astro-island")||customElements.define("astro-island",(o=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;let e=null,r=this.querySelector("astro-fragment");if(r==null&&this.hasAttribute("tmpl")){let i=this.querySelector("template[data-astro-template]");i&&(e=i.innerHTML,i.remove())}else r&&(e=r.innerHTML);const s=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,s,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}async connectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const e=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const r=this.getAttribute("renderer-url"),[s,{default:i}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]);return this.Component=s[this.getAttribute("component-export")||"default"],this.hydrator=i,this.hydrate},e,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},o.observedAttributes=["props"],o))}</script><astro-island uid="Z1VRcWB" component-url="/entry.1ed9b12a.js" component-export="default" renderer-url="/entry.8f4a97b1.js" props="{}" ssr="" client="only" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;DarkModeSwitch&quot;,&quot;value&quot;:true}"></astro-island>
     <div class="wrapper astro-27MHQCEU">
     <div class="banner astro-27MHQCEU">
         <style >
     
 
-    .astro-imagetools-picture-8FDCC2CC {
+    .astro-imagetools-picture-46876194 {
       --opacity: 1;
       --z-index: 0;
     }
 
     
-            .astro-imagetools-picture-8FDCC2CC img {
+            .astro-imagetools-picture-46876194 img {
               z-index: 1;
               position: relative;
             }
           
 
-    .astro-imagetools-picture-8FDCC2CC::after {
+    .astro-imagetools-picture-46876194::after {
       inset: 0;
       content: "";
+      left: 0;
       width: 100%;
       height: 100%;
       position: absolute;
@@ -61,21 +55,22 @@ setup("1UsboN", {name:"DarkModeSwitch",value: true}, async () => {
       z-index: var(--z-index);
     }
   
-        .astro-imagetools-picture-8FDCC2CC img {
+        .astro-imagetools-picture-46876194 img {
           object-fit: cover;
           object-position: 50% 50%;
         }
 
-        .astro-imagetools-picture-8FDCC2CC::after {
+        .astro-imagetools-picture-46876194::after {
           background-size: cover;
           background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAJABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUDBgf/xAAoEAABAwMCAwkAAAAAAAAAAAABAgMEABEhBQYVMzU2QVFxcnN0ssH/xAAWAQEBAQAAAAAAAAAAAAAAAAADAgT/xAAeEQEAAgIBBQAAAAAAAAAAAAABAAMCBBESE1GBkf/aAAwDAQACEQMRAD8AzxO2WDpzMyFHW/GUcPJQVZ7x50J06MzJSZkeStoWK1hlSceFzi9R7N6av3P0U/352Sl/Jb+1aDcsLe2eOYTrnQPqLOCaa8A7GivFpVym4BIzbNja9FVEctv0iipz2bjJ4T5AasRn/9k=");
           background-position: 50% 50%;
         }
       </style><picture
-    class="astro-imagetools-picture astro-imagetools-picture-8FDCC2CC"
-    style="position: relative; display: inline-block;width: 100%; height: 100%;"
+    
+    class="astro-imagetools-picture astro-imagetools-picture-46876194"
+    style="position: relative; display: inline-block; ; width: 100%; height: 100%;"
     ><source
-            srcset="/assets/ingress-bg@320w.af4df52f.webp 320w, /assets/ingress-bg@1691w.c30a8ca8.webp 1691w, /assets/ingress-bg@2834w.aa8d51ad.webp 2834w, /assets/ingress-bg@3749w.a11bb371.webp 3749w, /assets/ingress-bg@4434w.b4e0a7cd.webp 4434w, /assets/ingress-bg@4891w.0ca6d1dd.webp 4891w, /assets/ingress-bg@1920w.75687b35.webp 1920w"
+            srcset="/assets/ingress-bg@320w.af4df52f.webp 320w, /assets/ingress-bg@777w.113f51e7.webp 777w, /assets/ingress-bg@1158w.16f46d1d.webp 1158w, /assets/ingress-bg@1463w.7f0688ec.webp 1463w, /assets/ingress-bg@1691w.c30a8ca8.webp 1691w, /assets/ingress-bg@1844w.d644e2a8.webp 1844w, /assets/ingress-bg@1920w.75687b35.webp 1920w"
             sizes="(min-width: 48.6em ) 48.6em, 100vw"
             width="1920"
             height="853"
@@ -86,14 +81,14 @@ setup("1UsboN", {name:"DarkModeSwitch",value: true}, async () => {
     
     src="/assets/ingress-bg@1920w.f5563c39.jpeg"
     alt="Cover image"
-    srcset="/assets/ingress-bg@320w.e18dce01.jpeg 320w, /assets/ingress-bg@1691w.4e82a003.jpeg 1691w, /assets/ingress-bg@2834w.5bbd4254.jpeg 2834w, /assets/ingress-bg@3749w.c5b11a10.jpeg 3749w, /assets/ingress-bg@4434w.2ec67d6c.jpeg 4434w, /assets/ingress-bg@4891w.134fc3bb.jpeg 4891w, /assets/ingress-bg@1920w.f5563c39.jpeg 1920w"
+    srcset="/assets/ingress-bg@320w.e18dce01.jpeg 320w, /assets/ingress-bg@777w.39376d48.jpeg 777w, /assets/ingress-bg@1158w.e22f02de.jpeg 1158w, /assets/ingress-bg@1463w.6ea93105.jpeg 1463w, /assets/ingress-bg@1691w.4e82a003.jpeg 1691w, /assets/ingress-bg@1844w.cd6b6cba.jpeg 1844w, /assets/ingress-bg@1920w.f5563c39.jpeg 1920w"
     sizes="(min-width: 48.6em ) 48.6em, 100vw"
     width="1920"
     height="853"
     loading="eager"
     decoding="async"
     class="astro-imagetools-img"
-    style="display: inline-block; overflow: hidden;  width: 100%; height: 100%;"
+    style="display: inline-block; overflow: hidden; vertical-align: middle; ; width: 100%; height: 100%;"
     onload="parentElement.style.setProperty('--z-index', 1);parentElement.style.setProperty('--opacity', 0);"
   />
   </picture>
@@ -118,21 +113,22 @@ setup("1UsboN", {name:"DarkModeSwitch",value: true}, async () => {
       <h2 id="link-cleaner">Link cleaner</h2><p>In Ingress, you have many “portals” positioned all over the world, and the main goal is to create links between portals that form triangular fields. However, these links between the portals can’t cross each other. So one common pattern is to create two “anchor” portals, and then link many “spine” portals onto them. Here’s what it looks like:</p><p><style >
     
 
-    .astro-imagetools-picture-B7387181 {
+    .astro-imagetools-picture-148BA7C1 {
       --opacity: 1;
       --z-index: 0;
     }
 
     
-            .astro-imagetools-picture-B7387181 img {
+            .astro-imagetools-picture-148BA7C1 img {
               z-index: 1;
               position: relative;
             }
           
 
-    .astro-imagetools-picture-B7387181::after {
+    .astro-imagetools-picture-148BA7C1::after {
       inset: 0;
       content: "";
+      left: 0;
       width: 100%;
       height: 100%;
       position: absolute;
@@ -141,21 +137,22 @@ setup("1UsboN", {name:"DarkModeSwitch",value: true}, async () => {
       z-index: var(--z-index);
     }
   
-        .astro-imagetools-picture-B7387181 img {
+        .astro-imagetools-picture-148BA7C1 img {
           object-fit: cover;
           object-position: 50% 50%;
         }
 
-        .astro-imagetools-picture-B7387181::after {
+        .astro-imagetools-picture-148BA7C1::after {
           background-size: cover;
           background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC5klEQVQokX2TX2hTdxTH8zTY42CvPuzBIdsYNVKHexAUfPEfWWtmMYrO1jpN1YLzwb1MBirqW32bguJmlQpOrRavdrSJbVJmza1p86dL0jZtmrY3yc2f5s+96b2/z6ip/0D8wnk4cM6HczjnazGF4EMSwnwv1/NREFWKFQ23PIZLHuV5KIJvPMbAyyB9vlH8UzNYlovjcwtc7brPXw+ecLO7l5EXPqhqaDmNUsGgGJih2nEJzCpjkwm+3N7M17bDWO1t1DcdZ63dyeptzfzwy/kasMft5dMNNj7b5OCTjQ4O//YHehLmoiXS7hC5jk60Cx2wmCc4PceGpnbW209gbWzD2uBk3a5jrNnWSmP72RrQ/TLAqj3H+MJxHMuWFg78foOleA7lWZj8tXuoko/89b9hOk5wOsl3PzpZb3dSbz+KtfEI1p0t1G09wL5fL9aAg6EJ1hw6xVetp/l810naL9/FcA2T+bMH1R0i44midj4G/yiByTjfN7Wxcc/PbN7byub9TnbsdrDV1sihM5eWgYKyrjOdnCGRTJDIqswPviDX1Uv2n2EyI7OonhiZO0/hX5lALM63thbqbD9hbThIXUMz9TsdfLPFRtOpM1iEuXLNogpKAIIeGPOTHk2S7+omIz0k7fGTeTpM5dYNChNhpD43kkdG8o4geUaQhvxIXhk5FK6tXEqVSQUVivduUx0aQGCiJnSU4CJqdz/5zgcsDvip3H8EkTAfk6WY0kj7Jsg+eUam309aTrAYmkVXclTUCsbym05NweMe6HchXC4MTcMwTYyqjmEYGIb5KkzTxKJEyqjDIXJSL+pQjLQrTFH+DxbmYTIK83OgKghlAdHXh7hyBSKx2vNrRXhtgBWDWFKREml/guygl9R4gUysgCiWIZtFpBYQs7OIaBQxPo4Ih+HmLZY6zmGY5RWOeAN7BaxWBIXJFKr3OUooS6VggNAR5lKt4XWlYSA0DbI5zKCMqZfeAt+Z8H+i3CVOaHLX5AAAAABJRU5ErkJggg==");
           background-position: 50% 50%;
         }
       </style><picture
-    class="astro-imagetools-picture astro-imagetools-picture-B7387181"
-    style="position: relative; display: inline-block;max-width: 100%; height: auto;"
+    
+    class="astro-imagetools-picture astro-imagetools-picture-148BA7C1"
+    style="position: relative; display: inline-block; ; max-width: 100%; height: auto;"
     ><source
-            srcset="/assets/onion@320w.b9dce03e.avif 320w, /assets/onion@1034w.214e7334.avif 1034w, /assets/onion@1569w.ca3f8b72.avif 1569w, /assets/onion@1926w.3f401743.avif 1926w, /assets/onion@1212w.181ecf10.avif 1212w"
+            srcset="/assets/onion@320w.b9dce03e.avif 320w, /assets/onion@677w.a00c2536.avif 677w, /assets/onion@944w.8ff0a223.avif 944w, /assets/onion@1123w.184d1792.avif 1123w, /assets/onion@1212w.181ecf10.avif 1212w"
             sizes="(min-width: 1212px) 1212px, 100vw"
             width="1212"
             height="708"
@@ -163,7 +160,7 @@ setup("1UsboN", {name:"DarkModeSwitch",value: true}, async () => {
             
           />
 <source
-            srcset="/assets/onion@320w.3b35bb22.webp 320w, /assets/onion@1034w.f1568e9e.webp 1034w, /assets/onion@1569w.e1d4157c.webp 1569w, /assets/onion@1926w.d0432845.webp 1926w, /assets/onion@1212w.fd07ff8d.webp 1212w"
+            srcset="/assets/onion@320w.3b35bb22.webp 320w, /assets/onion@677w.035d77c6.webp 677w, /assets/onion@944w.586fbadd.webp 944w, /assets/onion@1123w.272df6c5.webp 1123w, /assets/onion@1212w.fd07ff8d.webp 1212w"
             sizes="(min-width: 1212px) 1212px, 100vw"
             width="1212"
             height="708"
@@ -174,14 +171,14 @@ setup("1UsboN", {name:"DarkModeSwitch",value: true}, async () => {
     
     src="/assets/onion@1212w.55f239f9.png"
     alt="A so-called onion field"
-    srcset="/assets/onion@320w.50ec8e8a.png 320w, /assets/onion@1034w.73a35f00.png 1034w, /assets/onion@1569w.bc3b4127.png 1569w, /assets/onion@1926w.7e635d20.png 1926w, /assets/onion@1212w.55f239f9.png 1212w"
+    srcset="/assets/onion@320w.50ec8e8a.png 320w, /assets/onion@677w.21e512c4.png 677w, /assets/onion@944w.9d4a6b28.png 944w, /assets/onion@1123w.6030379b.png 1123w, /assets/onion@1212w.55f239f9.png 1212w"
     sizes="(min-width: 1212px) 1212px, 100vw"
     width="1212"
     height="708"
     loading="lazy"
     decoding="async"
     class="astro-imagetools-img"
-    style="display: inline-block; overflow: hidden;  max-width: 100%; height: auto;"
+    style="display: inline-block; overflow: hidden; vertical-align: middle; ; max-width: 100%; height: auto;"
     onload="parentElement.style.setProperty('--z-index', 1);parentElement.style.setProperty('--opacity', 0);"
   />
   </picture>
@@ -197,5 +194,4 @@ setup("1UsboN", {name:"DarkModeSwitch",value: true}, async () => {
     </footer>
   </div>
   </body></html>
-
 
