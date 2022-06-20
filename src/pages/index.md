@@ -1,10 +1,9 @@
 ---
 layout: ../layouts/index.astro
-title: Matěj Volf – Portfolio
+title: Matěj Volf
 image: /src/assets/me.jpg
 summary: |
-  High-school student, programmer in Python, JavaScript and Rust. Experienced with
-  all (except the most low-level) parts of the stack, including SQL, Docker, Git and Linux.
+  Node.js engineer at Apify | Student of Computer Science at MFF UK in Prague | Python, JavaScript and Rust enthusiast
 links:
   - name: GitHub
     href: "https://github.com/mvolfik"
@@ -23,25 +22,28 @@ skills:
   Linux: 3
   PostgreSQL: 3
   SQLAlchemy: 3
+jobs:
+  - role: Node.js engineer
+    company: Apify
+    timespan: June 2022 – present
+    tags:
+      - Node.js
+      - Web scraping
+    description: |
+      My entry job into the world of real-world IT. It's not the time to fully reflect on this job yet,
+      but so far I'm really enjoying the opportunity to learn from experienced engineers, from platform
+      DevOps managers to front-end engineers to senior web automation devs. The open and free company
+      culture allows me to get maximum insight and learning opportunities at this position.
 ---
 
-Hello! My name is Matěj and I'm from Tábor, Czech Republic. This May, I'm graduating
-from high school. After that, I'm going to continue my studies of Computer Science at
-the Faculty of Mathematics and Physics at Charles University in Prague. **I'll be happy
-to hear about job opportunities suitable for my skills and time availability** (I'll be a
-college student starting in October).
+Hello! My name is Matěj and I'm from Tábor, Czech Republic. This May I graduated from
+high school and I'm continuing my studies of Computer Science at the Faculty of
+Mathematics and Physics at Charles University in Prague. I'm currently employed at the
+Czech startup [Apify](https://apify.com) in the role of a _Node.js engineer / Web
+Automation developer_.
 
-Here you can find a showcase of what I can do and what I've done. I don't have any
-_"real"_ software engineering work experience, so it's hard for me to estimate how my
-coding skills stand in comparison with the outside world. But I'm able to participate
-in technical disussions, and made a few minor contributions to various open-source
-projects. You can see a breakdown of my preferred technologies and how confident I am
-in working with them in the column on the left.
-
-### My story & history of used tech
-
-My first bigger projects used Python + Flask, with small sprinkles of disorganized
-JavaScript. About a year and a half ago I got more into the JS world and worked a lot
-especially with Svelte(Kit). With Svelte, I enjoyed working on the _interactivity_ part
-of frontend, but the design side was never my strong point. During Advent of Code 2021,
-I learned Rust, which I really enjoyed later using for my high-school graduation project.
+Here you can find a showcase of my previous work and what technologies I enjoy working
+with. Apart from my current job at Apify, where I'm enjoying the possibility to work
+with and learn from experienced engineers with many different expertises, when I was
+at high school I worked on several projects of my own and I also made a few minor
+contributions to various open-source projects.

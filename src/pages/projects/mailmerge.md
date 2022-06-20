@@ -4,7 +4,7 @@ name: Python mailmerge
 links:
   - name: View repository
     href: https://github.com/mvolfik/mailmerge/
-timespan: March – August 2021
+timespan: August 2021
 ordering_value: 20210801
 tags:
   - scripting

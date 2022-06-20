@@ -65,7 +65,8 @@ h6 {
 
 a {
   color: #267cb9;
-  text-decoration: none;
+  text-decoration: 1px dotted underline;
+  text-underline-offset: 0.2em;
 
   &:hover,
   &:focus {
