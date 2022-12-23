@@ -4,7 +4,7 @@ name: RoboRally
 image: /src/assets/roborally.png
 links:
   - name: Play the game online
-    href: https://roborally-mvolf.herokuapp.com/
+    href: https://roborally.mvolfik.com/
   - name: View repository
     href: https://github.com/mvolfik/roborally/
 read_more: true
