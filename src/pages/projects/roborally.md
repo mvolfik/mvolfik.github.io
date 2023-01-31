@@ -8,7 +8,7 @@ links:
   - name: View repository
     href: https://github.com/mvolfik/roborally/
 read_more: true
-timespan: March 2022
+timespan: March – December 2022
 ordering_value: 20220315
 tags:
   - game
@@ -18,6 +18,8 @@ tags:
   - WebAssembly
 description: |
   As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.
+
+  This project occassionally receives new feautes when I get to improve it as a piece of work for my university courses.
 ---
 
 Roborally is a turn-based strategic board game. Each player controls one robot, which moves around a factory. The goal of each player is to complete the game course by visiting each of the checkpoints in specified order. Players control the robots by "programming" movement cards into five registers. However, these moves are then executed by all players at once. Moreover, after each move register, various board elements activate and further move and rotate the robots. And order matters - when two robots collide, they push each other and chaos ensues.

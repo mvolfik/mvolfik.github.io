@@ -13,7 +13,7 @@ tags:
   - frontend
   - deployment
 description: |
-  Since 2018, I've been maintaining my mother's website (and eventually also a small e-shop). The first version was a simple static website generated with Frozen-Flask. However, as the scope increased (and my skills improved as well) , a frontend framework became necessary, so the website is currently written in SvelteKit.
+  Since 2018, I've been maintaining my mother's website and e-shop. The first version was a simple static website generated with Frozen-Flask. However, as my skills improved, I got to iterate many new technologies, landing on the current stack of SvelteKit, custom server for assets written in Rust and NetlifyCMS.
 
-  With this project, I also learned a lot about how to manage a full VPS – while the app itself still runs on Netlify (I intend to move it away as soon as I find a better CMS + asset handling solution), I'm self-hosting Caddy, Plausible analytics and a Postgres database in a Docker-compose cluster. I've also setup Grafana with alerts to monitor server load etc.
+  With this project, I also learned a lot about how to manage a full VPS – along with the server itself, I'm self-hosting Caddy, Plausible analytics and a Postgres database in a Docker-compose cluster. I've also setup Grafana with alerts to monitor server load etc.
 ---

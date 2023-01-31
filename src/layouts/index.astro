@@ -48,7 +48,7 @@ const props = Astro.props.content as Props;
           >
           </path>
         </svg>
-        Tábor, Czech Republic
+        Prague, Czech Republic
       </p>
       <p id="bio">{props.summary}</p>
 
@@ -117,7 +117,7 @@ const props = Astro.props.content as Props;
                 ", "
               )}
             </span>
-            {timespan}
+            <span class="timespan">{timespan}</span>
           </h4>
           <p>{description}</p>
         </>
@@ -128,9 +128,9 @@ const props = Astro.props.content as Props;
         .sort(
           (a, b) => b.frontmatter.ordering_value - a.frontmatter.ordering_value
         )
-        .map(({ frontmatter, url }) => (
+        .map(({ frontmatter, url }, i) => (
           <>
-            <h4>
+            <h4 class:list={[{ noprint: i >= 2 }]}>
               <a target="_blank" href={frontmatter.links[0].href}>
                 {frontmatter.name}
               </a>
@@ -143,10 +143,10 @@ const props = Astro.props.content as Props;
               <span class="timespan">{frontmatter.timespan}</span>
             </h4>
             {frontmatter.description.split(/\n\w*\n/).map((paragraph) => (
-              <p>{paragraph}</p>
+              <p class:list={[{ noprint: i >= 2 }]}>{paragraph}</p>
             ))}
             {frontmatter.links.length > 1 || frontmatter.read_more ? (
-              <p>
+              <p class:list={[{ noprint: i >= 2 }]}>
                 {intersperse(
                   frontmatter.links.map(({ name, href }) => (
                     <a target="_blank" href={href}>

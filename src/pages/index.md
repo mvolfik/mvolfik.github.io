@@ -36,14 +36,14 @@ jobs:
       culture allows me to get maximum insight and learning opportunities at this position.
 ---
 
-Hello! My name is Matěj and I'm from Tábor, Czech Republic. This May I graduated from
-high school and I'm continuing my studies of Computer Science at the Faculty of
-Mathematics and Physics at Charles University in Prague. I'm currently employed at the
-Czech startup [Apify](https://apify.com) in the role of a _Node.js engineer / Web
-Automation developer_.
+Hello! My name is Matěj and I'm from Prague, Czech Republic. I'm currently in the first year
+of Bc. in Computer Science at the Faculty of Mathematics and Physics at Charles University.
+I'm also part-time employed at the Czech startup [Apify](https://apify.com) in the role of a
+_Node.js engineer / Web Automation developer_.
 
-Here you can find a showcase of my previous work and what technologies I enjoy working
+<p class="noprint">Here
+you can find a showcase of my previous work and what technologies I enjoy working
 with. Apart from my current job at Apify, where I'm enjoying the possibility to work
 with and learn from experienced engineers with many different expertises, when I was
 at high school I worked on several projects of my own and I also made a few minor
-contributions to various open-source projects.
+contributions to various open-source projects.</p>
