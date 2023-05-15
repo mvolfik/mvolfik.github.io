@@ -75,6 +75,10 @@ a {
   }
 }
 
+.printonly {
+  display: none;
+}
+
 @media print {
   html {
     font-size: 10pt;
@@ -85,6 +89,9 @@ a {
   }
   .noprint {
     display: none;
+  }
+  .printonly {
+    display: block;
   }
   a:after {
     content: " [" attr(href) "]";

@@ -10,17 +10,17 @@ links:
   - name: E-mail
     href: "https://mailhide.io/en/e/8adeL"
 skills:
-  Flask: 4.5
   SvelteJS: 4.5
   JavaScript: 4.5
-  Python: 4
+  Rust: 4
+  Linux: 3.7
+  Git: 3.7
+  Docker: 3.7
+  Python: 3.5
+  PostgreSQL: 3.5
   Heroku: 3.5
-  Rust: 3.3
-  Docker: 3.3
+  Flask: 3
   SolidJS: 3
-  Git: 3
-  Linux: 3
-  PostgreSQL: 3
   SQLAlchemy: 3
 jobs:
   - role: Node.js engineer

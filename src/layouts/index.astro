@@ -169,11 +169,18 @@ const props = Astro.props.content as Props;
           </>
         ))}
     </main>
-    <footer class="noprint">
+    <footer>
       <p>
         <small>
-          Powered by <a target="_blank" href="https://astro.build/">Astro</a>;
-          Hosted on GitHub Pages
+          <span class="noprint">
+            Powered by <a target="_blank" href="https://astro.build/">Astro</a>;
+            Hosted on GitHub Pages
+          </span>
+          <span class="printonly">
+            This resume was printed from <a href="https://mvolfik.github.io/"
+              >https://mvolfik.github.io/
+            </a> on {new Date().toLocaleDateString()}
+          </span>
         </small>
       </p>
     </footer>
@@ -292,6 +299,15 @@ const props = Astro.props.content as Props;
 
     main {
       grid-area: 1 / 2 / 3 / 2;
+    }
+  }
+
+  @media print {
+    main {
+      grid-area: initial;
+    }
+    footer {
+      grid-column: 1 / 3;
     }
   }
 </style>
