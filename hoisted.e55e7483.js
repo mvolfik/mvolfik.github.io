@@ -1,0 +1,1 @@
+import"./chunks/BackgroundImage.astro_astro_type_script_index_0_lang.6f059456.js";document.querySelector("a[href^='https://mailhide.io']").href=atob("tFWasR3b6gWZsx2bA1mdvxmZptmLj9Wb".split("").reverse().join("")).split("").reverse().join("");

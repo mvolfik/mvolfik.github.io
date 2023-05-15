@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en-US" class="dark">
+<!DOCTYPE html>
+<html lang="en-US" class="dark">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,56 +22,57 @@ For tactical advantage, the code isn't public, but I'll be happy to present some
     <meta name="twitter:card" content="summary">
     <meta property="twitter:title" content="Ingress tools">
     
-  <link rel="stylesheet" href="/assets/asset.dc25f5d7.css" />
-<link rel="stylesheet" href="/assets/asset.2673fc7f.css" /><style>astro-island, astro-fragment { display: contents; }</style><script type="module" src="/entry.70e67e9d.js"></script>
-</head>
+  <link rel="stylesheet" href="/assets/index.62ca9312.css" />
+<link rel="stylesheet" href="/assets/bakatasklist.8dee31e7.css" />
+<link rel="stylesheet" href="/assets/index.14556dfa.css" /><script type="module" src="/hoisted.3b52a5c3.js"></script></head>
   <body>
-    <script>(self.Astro=self.Astro||{}).only=a=>{(async()=>await(await a())())()};var o;{const a={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,e)=>{if(t===""||!Array.isArray(e))return e;const[r,s]=e;return r in a?a[r](s):void 0};customElements.get("astro-island")||customElements.define("astro-island",(o=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;let e=null,r=this.querySelector("astro-fragment");if(r==null&&this.hasAttribute("tmpl")){let i=this.querySelector("template[data-astro-template]");i&&(e=i.innerHTML,i.remove())}else r&&(e=r.innerHTML);const s=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,s,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}async connectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const e=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const r=this.getAttribute("renderer-url"),[s,{default:i}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]);return this.Component=s[this.getAttribute("component-export")||"default"],this.hydrator=i,this.hydrate},e,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},o.observedAttributes=["props"],o))}</script><astro-island uid="Z1VRcWB" component-url="/entry.1ed9b12a.js" component-export="default" renderer-url="/entry.8f4a97b1.js" props="{}" ssr="" client="only" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;DarkModeSwitch&quot;,&quot;value&quot;:true}"></astro-island>
-    <div class="wrapper astro-27MHQCEU">
-    <div class="banner astro-27MHQCEU">
-        <style >
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).only=t=>{(async()=>await(await t())())()},window.dispatchEvent(new Event("astro:only"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="ZQX3Ii" component-url="/DarkModeSwitch.d6ca769c.js" component-export="default" renderer-url="/client.1fb2ba11.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeSwitch&quot;,&quot;value&quot;:true}"></astro-island>
+    <div class="wrapper astro-6WUT7NEW">
+    <div class="banner astro-6WUT7NEW">
+          <style >
     
 
-    .astro-imagetools-picture-E32BB52B {
+    .astro-imagetools-picture-F4E9072A {
       --opacity: 1;
       --z-index: 0;
     }
 
     
-            .astro-imagetools-picture-E32BB52B img {
+            .astro-imagetools-picture-F4E9072A img {
               z-index: 1;
               position: relative;
             }
           
 
-    .astro-imagetools-picture-E32BB52B::after {
+    .astro-imagetools-picture-F4E9072A::after {
       inset: 0;
       content: "";
       left: 0;
       width: 100%;
       height: 100%;
       position: absolute;
+      pointer-events: none;
       transition: opacity 1s;
       opacity: var(--opacity);
       z-index: var(--z-index);
     }
   
-        .astro-imagetools-picture-E32BB52B img {
+        .astro-imagetools-picture-F4E9072A img {
           object-fit: cover;
           object-position: 50% 50%;
         }
 
-        .astro-imagetools-picture-E32BB52B::after {
+        .astro-imagetools-picture-F4E9072A::after {
           background-size: cover;
           background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAJABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUDBgf/xAAoEAABAwMCAwkAAAAAAAAAAAABAgMEABEhBQYVMzU2QVFxcnN0ssH/xAAWAQEBAQAAAAAAAAAAAAAAAAADAgT/xAAeEQEAAgIBBQAAAAAAAAAAAAABAAMCBBESE1GBkf/aAAwDAQACEQMRAD8AzxO2WDpzMyFHW/GUcPJQVZ7x50J06MzJSZkeStoWK1hlSceFzi9R7N6av3P0U/352Sl/Jb+1aDcsLe2eOYTrnQPqLOCaa8A7GivFpVym4BIzbNja9FVEctv0iipz2bjJ4T5AasRn/9k=");
           background-position: 50% 50%;
         }
       </style><picture
     
-    class="astro-imagetools-picture astro-imagetools-picture-E32BB52B"
+    class="astro-imagetools-picture astro-imagetools-picture-F4E9072A"
     style="position: relative; display: inline-block; ; width: 100%; height: 100%;"
     ><source
-            srcset="/assets/ingress-bg@320w.af4df52f.webp 320w, /assets/ingress-bg@777w.113f51e7.webp 777w, /assets/ingress-bg@1158w.16f46d1d.webp 1158w, /assets/ingress-bg@1463w.7f0688ec.webp 1463w, /assets/ingress-bg@1691w.c30a8ca8.webp 1691w, /assets/ingress-bg@1844w.d644e2a8.webp 1844w, /assets/ingress-bg@1920w.75687b35.webp 1920w"
+            srcset="/assets/ingress-bg@320w.3e7f382a.webp 320w, /assets/ingress-bg@777w.661f9677.webp 777w, /assets/ingress-bg@1158w.56a97ba3.webp 1158w, /assets/ingress-bg@1463w.9271a6dd.webp 1463w, /assets/ingress-bg@1691w.31bbb232.webp 1691w, /assets/ingress-bg@1844w.b4714fe3.webp 1844w, /assets/ingress-bg@1920w.932b4870.webp 1920w"
             sizes="(min-width: 48.6em ) 48.6em, 100vw"
             width="1920"
             height="853"
@@ -79,9 +81,9 @@ For tactical advantage, the code isn't public, but I'll be happy to present some
           />
 <img
     
-    src="/assets/ingress-bg@1920w.f5563c39.jpeg"
+    src="/assets/ingress-bg@1920w.64484218.jpeg"
     alt="Cover image"
-    srcset="/assets/ingress-bg@320w.e18dce01.jpeg 320w, /assets/ingress-bg@777w.39376d48.jpeg 777w, /assets/ingress-bg@1158w.e22f02de.jpeg 1158w, /assets/ingress-bg@1463w.6ea93105.jpeg 1463w, /assets/ingress-bg@1691w.4e82a003.jpeg 1691w, /assets/ingress-bg@1844w.cd6b6cba.jpeg 1844w, /assets/ingress-bg@1920w.f5563c39.jpeg 1920w"
+    srcset="/assets/ingress-bg@320w.525af8d8.jpeg 320w, /assets/ingress-bg@777w.ef6ba56e.jpeg 777w, /assets/ingress-bg@1158w.df80e424.jpeg 1158w, /assets/ingress-bg@1463w.3e935b16.jpeg 1463w, /assets/ingress-bg@1691w.3b2cf1f0.jpeg 1691w, /assets/ingress-bg@1844w.b04250f0.jpeg 1844w, /assets/ingress-bg@1920w.64484218.jpeg 1920w"
     sizes="(min-width: 48.6em ) 48.6em, 100vw"
     width="1920"
     height="853"
@@ -89,105 +91,36 @@ For tactical advantage, the code isn't public, but I'll be happy to present some
     decoding="async"
     class="astro-imagetools-img"
     style="display: inline-block; overflow: hidden; vertical-align: middle; ; width: 100%; height: 100%;"
-    onload="parentElement.style.setProperty('--z-index', 1);parentElement.style.setProperty('--opacity', 0);"
+    onload="parentElement.style.setProperty('--z-index', 1); parentElement.style.setProperty('--opacity', 0);"
   />
   </picture>
 
-        <h1 class="astro-27MHQCEU">Ingress tools</h1>
-      </div>
-    <main class="astro-27MHQCEU">
-      <p class="noprint astro-27MHQCEU"><a href="/" class="astro-27MHQCEU">&larr; back to homepage</a></p>
-      <p class="metadata astro-27MHQCEU">
-        Tags: <span class="tags astro-27MHQCEU">
-          <span class="astro-27MHQCEU">Python</span>, <span class="astro-27MHQCEU">algorithms</span>
+          <h1 class="astro-6WUT7NEW">Ingress tools</h1>
+        </div>
+    <main class="astro-6WUT7NEW">
+      <p class="noprint astro-6WUT7NEW"><a href="/" class="astro-6WUT7NEW">&larr; back to homepage</a></p>
+      <p class="metadata astro-6WUT7NEW">
+        Tags: <span class="tags astro-6WUT7NEW">
+          <span class="astro-6WUT7NEW">Python</span>, <span class="astro-6WUT7NEW">algorithms</span>
         </span>
       </p>
-      <p class="metadata astro-27MHQCEU">Timespan: May 2020 – January 2021</p>
-      <p class="metadata astro-27MHQCEU">
-        <a target="_blank" href="https://ingress.com/game/" class="astro-27MHQCEU">
-              About Ingress
-            </a>
+      <p class="metadata astro-6WUT7NEW">Timespan: May 2020 – January 2021</p>
+      <p class="metadata astro-6WUT7NEW">
+        <a target="_blank" href="https://ingress.com/game/" class="astro-6WUT7NEW">
+                About Ingress
+              </a>
       </p>
-      <p class="astro-27MHQCEU">Ingress is an augmented-reality GPS game, an ever-lasting battle of two factions. The game provides an online real-time game map, and each faction develops its own, private set of tools that operate on the game data and facilitate planning and monitoring operations. One the tools I created helps with preparing efficient game plans.</p><p class="astro-27MHQCEU">For tactical advantage, the code isn&#39;t public, but I&#39;ll be happy to present some parts of it if you reach out.
+      <p class="astro-6WUT7NEW">Ingress is an augmented-reality GPS game, an ever-lasting battle of two factions. The game provides an online real-time game map, and each faction develops its own, private set of tools that operate on the game data and facilitate planning and monitoring operations. One the tools I created helps with preparing efficient game plans.</p><p class="astro-6WUT7NEW">For tactical advantage, the code isn&#39;t public, but I&#39;ll be happy to present some parts of it if you reach out.
 </p>
-      <h2 id="link-cleaner">Link cleaner</h2><p>In Ingress, you have many “portals” positioned all over the world, and the main goal is to create links between portals that form triangular fields. However, these links between the portals can’t cross each other. So one common pattern is to create two “anchor” portals, and then link many “spine” portals onto them. Here’s what it looks like:</p><p><style >
-    
-
-    .astro-imagetools-picture-2092DF45 {
-      --opacity: 1;
-      --z-index: 0;
-    }
-
-    
-            .astro-imagetools-picture-2092DF45 img {
-              z-index: 1;
-              position: relative;
-            }
-          
-
-    .astro-imagetools-picture-2092DF45::after {
-      inset: 0;
-      content: "";
-      left: 0;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      transition: opacity 1s;
-      opacity: var(--opacity);
-      z-index: var(--z-index);
-    }
-  
-        .astro-imagetools-picture-2092DF45 img {
-          object-fit: cover;
-          object-position: 50% 50%;
-        }
-
-        .astro-imagetools-picture-2092DF45::after {
-          background-size: cover;
-          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC5klEQVQokX2TX2hTdxTH8zTY42CvPuzBIdsYNVKHexAUfPEfWWtmMYrO1jpN1YLzwb1MBirqW32bguJmlQpOrRavdrSJbVJmza1p86dL0jZtmrY3yc2f5s+96b2/z6ip/0D8wnk4cM6HczjnazGF4EMSwnwv1/NREFWKFQ23PIZLHuV5KIJvPMbAyyB9vlH8UzNYlovjcwtc7brPXw+ecLO7l5EXPqhqaDmNUsGgGJih2nEJzCpjkwm+3N7M17bDWO1t1DcdZ63dyeptzfzwy/kasMft5dMNNj7b5OCTjQ4O//YHehLmoiXS7hC5jk60Cx2wmCc4PceGpnbW209gbWzD2uBk3a5jrNnWSmP72RrQ/TLAqj3H+MJxHMuWFg78foOleA7lWZj8tXuoko/89b9hOk5wOsl3PzpZb3dSbz+KtfEI1p0t1G09wL5fL9aAg6EJ1hw6xVetp/l810naL9/FcA2T+bMH1R0i44midj4G/yiByTjfN7Wxcc/PbN7byub9TnbsdrDV1sihM5eWgYKyrjOdnCGRTJDIqswPviDX1Uv2n2EyI7OonhiZO0/hX5lALM63thbqbD9hbThIXUMz9TsdfLPFRtOpM1iEuXLNogpKAIIeGPOTHk2S7+omIz0k7fGTeTpM5dYNChNhpD43kkdG8o4geUaQhvxIXhk5FK6tXEqVSQUVivduUx0aQGCiJnSU4CJqdz/5zgcsDvip3H8EkTAfk6WY0kj7Jsg+eUam309aTrAYmkVXclTUCsbym05NweMe6HchXC4MTcMwTYyqjmEYGIb5KkzTxKJEyqjDIXJSL+pQjLQrTFH+DxbmYTIK83OgKghlAdHXh7hyBSKx2vNrRXhtgBWDWFKREml/guygl9R4gUysgCiWIZtFpBYQs7OIaBQxPo4Ih+HmLZY6zmGY5RWOeAN7BaxWBIXJFKr3OUooS6VggNAR5lKt4XWlYSA0DbI5zKCMqZfeAt+Z8H+i3CVOaHLX5AAAAABJRU5ErkJggg==");
-          background-position: 50% 50%;
-        }
-      </style><picture
-    
-    class="astro-imagetools-picture astro-imagetools-picture-2092DF45"
-    style="position: relative; display: inline-block; ; max-width: 100%; height: auto;"
-    ><source
-            srcset="/assets/onion@320w.b9dce03e.avif 320w, /assets/onion@677w.a00c2536.avif 677w, /assets/onion@944w.8ff0a223.avif 944w, /assets/onion@1123w.184d1792.avif 1123w, /assets/onion@1212w.181ecf10.avif 1212w"
-            sizes="(min-width: 1212px) 1212px, 100vw"
-            width="1212"
-            height="708"
-            type="image/avif"
-            
-          />
-<source
-            srcset="/assets/onion@320w.3b35bb22.webp 320w, /assets/onion@677w.035d77c6.webp 677w, /assets/onion@944w.586fbadd.webp 944w, /assets/onion@1123w.272df6c5.webp 1123w, /assets/onion@1212w.fd07ff8d.webp 1212w"
-            sizes="(min-width: 1212px) 1212px, 100vw"
-            width="1212"
-            height="708"
-            type="image/webp"
-            
-          />
-<img
-    
-    src="/assets/onion@1212w.55f239f9.png"
-    alt="A so-called onion field"
-    srcset="/assets/onion@320w.50ec8e8a.png 320w, /assets/onion@677w.21e512c4.png 677w, /assets/onion@944w.9d4a6b28.png 944w, /assets/onion@1123w.6030379b.png 1123w, /assets/onion@1212w.55f239f9.png 1212w"
-    sizes="(min-width: 1212px) 1212px, 100vw"
-    width="1212"
-    height="708"
-    loading="lazy"
-    decoding="async"
-    class="astro-imagetools-img"
-    style="display: inline-block; overflow: hidden; vertical-align: middle; ; max-width: 100%; height: auto;"
-    onload="parentElement.style.setProperty('--z-index', 1);parentElement.style.setProperty('--opacity', 0);"
-  />
-  </picture>
-</p><p>However, planning these fields efficiently is quite time-consuming. So I created this tool which takes a large area of portals and the two anchor ones, and creates the highest possible amount of fields whose links don’t intersect. That requires a surprising amount of algorithmic complexity, including spherical geometry (since Ingress is played on the Earth, a globe) and approximating NP-hard problems.</p>
+      <h2 id="link-cleaner">Link cleaner</h2>
+<p>In Ingress, you have many “portals” positioned all over the world, and the main goal is to create links between portals that form triangular fields. However, these links between the portals can’t cross each other. So one common pattern is to create two “anchor” portals, and then link many “spine” portals onto them. Here’s what it looks like:</p>
+<p><img src="/src/assets/onion.png" alt="A so-called onion field"></p>
+<p>However, planning these fields efficiently is quite time-consuming. So I created this tool which takes a large area of portals and the two anchor ones, and creates the highest possible amount of fields whose links don’t intersect. That requires a surprising amount of algorithmic complexity, including spherical geometry (since Ingress is played on the Earth, a globe) and approximating NP-hard problems.</p>
     </main>
-    <footer class="noprint astro-27MHQCEU">
-      <p class="astro-27MHQCEU">
-        <small class="astro-27MHQCEU">
-          Powered by <a href="https://astro.build/" class="astro-27MHQCEU">Astro</a>; Hosted on GitHub
+    <footer class="noprint astro-6WUT7NEW">
+      <p class="astro-6WUT7NEW">
+        <small class="astro-6WUT7NEW">
+          Powered by <a href="https://astro.build/" class="astro-6WUT7NEW">Astro</a>; Hosted on GitHub
           Pages
         </small>
       </p>

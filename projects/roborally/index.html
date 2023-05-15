@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en-US" class="dark">
+<!DOCTYPE html>
+<html lang="en-US" class="dark">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,56 +22,57 @@ This project occassionally receives new feautes when I get to improve it as a pi
     <meta name="twitter:card" content="summary">
     <meta property="twitter:title" content="RoboRally">
     
-  <link rel="stylesheet" href="/assets/asset.dc25f5d7.css" />
-<link rel="stylesheet" href="/assets/asset.2673fc7f.css" /><style>astro-island, astro-fragment { display: contents; }</style><script type="module" src="/entry.70e67e9d.js"></script>
-</head>
+  <link rel="stylesheet" href="/assets/index.62ca9312.css" />
+<link rel="stylesheet" href="/assets/bakatasklist.8dee31e7.css" />
+<link rel="stylesheet" href="/assets/index.14556dfa.css" /><script type="module" src="/hoisted.3b52a5c3.js"></script></head>
   <body>
-    <script>(self.Astro=self.Astro||{}).only=a=>{(async()=>await(await a())())()};var o;{const a={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,e)=>{if(t===""||!Array.isArray(e))return e;const[r,s]=e;return r in a?a[r](s):void 0};customElements.get("astro-island")||customElements.define("astro-island",(o=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;let e=null,r=this.querySelector("astro-fragment");if(r==null&&this.hasAttribute("tmpl")){let i=this.querySelector("template[data-astro-template]");i&&(e=i.innerHTML,i.remove())}else r&&(e=r.innerHTML);const s=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,s,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}async connectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const e=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const r=this.getAttribute("renderer-url"),[s,{default:i}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]);return this.Component=s[this.getAttribute("component-export")||"default"],this.hydrator=i,this.hydrate},e,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},o.observedAttributes=["props"],o))}</script><astro-island uid="Z1VRcWB" component-url="/entry.1ed9b12a.js" component-export="default" renderer-url="/entry.8f4a97b1.js" props="{}" ssr="" client="only" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;DarkModeSwitch&quot;,&quot;value&quot;:true}"></astro-island>
-    <div class="wrapper astro-27MHQCEU">
-    <div class="banner astro-27MHQCEU">
-        <style >
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).only=t=>{(async()=>await(await t())())()},window.dispatchEvent(new Event("astro:only"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="ZQX3Ii" component-url="/DarkModeSwitch.d6ca769c.js" component-export="default" renderer-url="/client.1fb2ba11.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeSwitch&quot;,&quot;value&quot;:true}"></astro-island>
+    <div class="wrapper astro-6WUT7NEW">
+    <div class="banner astro-6WUT7NEW">
+          <style >
     
 
-    .astro-imagetools-picture-E04A7602 {
+    .astro-imagetools-picture-F39D161C {
       --opacity: 1;
       --z-index: 0;
     }
 
     
-            .astro-imagetools-picture-E04A7602 img {
+            .astro-imagetools-picture-F39D161C img {
               z-index: 1;
               position: relative;
             }
           
 
-    .astro-imagetools-picture-E04A7602::after {
+    .astro-imagetools-picture-F39D161C::after {
       inset: 0;
       content: "";
       left: 0;
       width: 100%;
       height: 100%;
       position: absolute;
+      pointer-events: none;
       transition: opacity 1s;
       opacity: var(--opacity);
       z-index: var(--z-index);
     }
   
-        .astro-imagetools-picture-E04A7602 img {
+        .astro-imagetools-picture-F39D161C img {
           object-fit: cover;
           object-position: 50% 50%;
         }
 
-        .astro-imagetools-picture-E04A7602::after {
+        .astro-imagetools-picture-F39D161C::after {
           background-size: cover;
           background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC6ElEQVQokR3QfU8adwDA8XsTy7KHZMuypNkyl6VJk6axS9ds2caTTqGlpTrpqImSClIrUEXCw3FwBweHwP3uDrSCVCxtF3XT2tql7+y7bG/g88dHmg0skJY11FafWnOPTcNkoZilIA5YNl+w4bxkcavO9dgqK2qVpDnkjnPGphihiyFy3SLvjGj0hniUV0gu7z2ShTIl55Ci0cP1JEFwa41l64RfOm9wm28oiV2i1QL+JwmWOkMi9inxRpNIPoNdyZHWVEJKhljBRvLP/kYiV6HcG6NoJhE5T7pt87N4x2Ozzy37L2Y759y3z9kUzyl3+mhiwB/razxMJdlumhRVnd/jUUL1faQpn4/8aopa6yllYwdNjHDbF8yJY0piwHprn3j7kDnrFH/rGKWzR87cZ0M1Udt7NIwWOXtMWRfcE0dIXq+HtccZNHNATbdYaY9xd84otnbJtgeUzAFKexe3c8GSdUxFDMh1BuRbexStAxr1Jsa2QDH3Wdz5G8njdpPIFlGcEVqjR9Y85Hb3H2asd3istxQ6fVzWW0LiiA1jm7RhUbGeEY4neFSooLW6KNVtlhIJfNUDJK/HQzwjI9sHaDVBst7koVpFbneZMc8Ito6Zdt6Tqhv8lFrhgWyQssdE1RKh1Cq71TLFQoap5Ap5q480PeXjUU5l2z78/2RRzjGZXOaBqpASLwm0ToiLP4nKDTylBbJHAlfnPWkxRrFH5A2bsmHSFANuiVOkgN9PJBojtr5JYn2LqjMmU6mRrajovT5Vp4fxdEhcq+HVgqgnNaKGxZazg+oMqXSfkek+J2KfcKN5gRQKhQgE/HjdLoJz85Q6++i6zsxcjGs+nav+BpP+JpNBnWt+A/f8Id9OK1yZKXMztMlsWObXpQZXIjqXb28hhcNh5ufn+Q++c/cuqxsypX6fH+/rfPjVGR9PnPLJxGs+u/yaT7875our53zw9QUfffOKS9fTTHy/xpc/ZLl0Y4PPb0b4F3nYJHcCt3FyAAAAAElFTkSuQmCC");
           background-position: 50% 50%;
         }
       </style><picture
     
-    class="astro-imagetools-picture astro-imagetools-picture-E04A7602"
+    class="astro-imagetools-picture astro-imagetools-picture-F39D161C"
     style="position: relative; display: inline-block; ; width: 100%; height: 100%;"
     ><source
-            srcset="/assets/roborally@320w.b6142e0b.webp 320w, /assets/roborally@662w.169728c9.webp 662w, /assets/roborally@935w.62d1ee27.webp 935w, /assets/roborally@1140w.5105ed21.webp 1140w, /assets/roborally@1277w.f91b497e.webp 1277w, /assets/roborally@1345w.974517b1.webp 1345w"
+            srcset="/assets/roborally@320w.12b625ab.webp 320w, /assets/roborally@662w.4955bee0.webp 662w, /assets/roborally@935w.37d777ba.webp 935w, /assets/roborally@1140w.32d9934d.webp 1140w, /assets/roborally@1277w.17c3d2b7.webp 1277w, /assets/roborally@1345w.b8d9db24.webp 1345w"
             sizes="(min-width: 48.6em ) 48.6em, 100vw"
             width="1345"
             height="746"
@@ -79,9 +81,9 @@ This project occassionally receives new feautes when I get to improve it as a pi
           />
 <img
     
-    src="/assets/roborally@1345w.baec6de4.png"
+    src="/assets/roborally@1345w.c2ea46d0.png"
     alt="Cover image"
-    srcset="/assets/roborally@320w.6d8efea9.png 320w, /assets/roborally@662w.d9efb37b.png 662w, /assets/roborally@935w.29c17266.png 935w, /assets/roborally@1140w.9108616a.png 1140w, /assets/roborally@1277w.236f0d1f.png 1277w, /assets/roborally@1345w.baec6de4.png 1345w"
+    srcset="/assets/roborally@320w.f7781483.png 320w, /assets/roborally@662w.cf48b8f0.png 662w, /assets/roborally@935w.be96c1ce.png 935w, /assets/roborally@1140w.358b4758.png 1140w, /assets/roborally@1277w.b9f47fa3.png 1277w, /assets/roborally@1345w.c2ea46d0.png 1345w"
     sizes="(min-width: 48.6em ) 48.6em, 100vw"
     width="1345"
     height="746"
@@ -89,35 +91,36 @@ This project occassionally receives new feautes when I get to improve it as a pi
     decoding="async"
     class="astro-imagetools-img"
     style="display: inline-block; overflow: hidden; vertical-align: middle; ; width: 100%; height: 100%;"
-    onload="parentElement.style.setProperty('--z-index', 1);parentElement.style.setProperty('--opacity', 0);"
+    onload="parentElement.style.setProperty('--z-index', 1); parentElement.style.setProperty('--opacity', 0);"
   />
   </picture>
 
-        <h1 class="astro-27MHQCEU">RoboRally</h1>
-      </div>
-    <main class="astro-27MHQCEU">
-      <p class="noprint astro-27MHQCEU"><a href="/" class="astro-27MHQCEU">&larr; back to homepage</a></p>
-      <p class="metadata astro-27MHQCEU">
-        Tags: <span class="tags astro-27MHQCEU">
-          <span class="astro-27MHQCEU">game</span>, <span class="astro-27MHQCEU">web</span>, <span class="astro-27MHQCEU">Svelte</span>, <span class="astro-27MHQCEU">Rust</span>, <span class="astro-27MHQCEU">WebAssembly</span>
+          <h1 class="astro-6WUT7NEW">RoboRally</h1>
+        </div>
+    <main class="astro-6WUT7NEW">
+      <p class="noprint astro-6WUT7NEW"><a href="/" class="astro-6WUT7NEW">&larr; back to homepage</a></p>
+      <p class="metadata astro-6WUT7NEW">
+        Tags: <span class="tags astro-6WUT7NEW">
+          <span class="astro-6WUT7NEW">game</span>, <span class="astro-6WUT7NEW">web</span>, <span class="astro-6WUT7NEW">Svelte</span>, <span class="astro-6WUT7NEW">Rust</span>, <span class="astro-6WUT7NEW">WebAssembly</span>
         </span>
       </p>
-      <p class="metadata astro-27MHQCEU">Timespan: March – December 2022</p>
-      <p class="metadata astro-27MHQCEU">
-        <a target="_blank" href="https://roborally.mvolfik.com/" class="astro-27MHQCEU">
-              Play the game online
-            </a> | <a target="_blank" href="https://github.com/mvolfik/roborally/" class="astro-27MHQCEU">
-              View repository
-            </a>
+      <p class="metadata astro-6WUT7NEW">Timespan: March – December 2022</p>
+      <p class="metadata astro-6WUT7NEW">
+        <a target="_blank" href="https://roborally.mvolfik.com/" class="astro-6WUT7NEW">
+                Play the game online
+              </a> | <a target="_blank" href="https://github.com/mvolfik/roborally/" class="astro-6WUT7NEW">
+                View repository
+              </a>
       </p>
-      <p class="astro-27MHQCEU">As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.</p><p class="astro-27MHQCEU">This project occassionally receives new feautes when I get to improve it as a piece of work for my university courses.
+      <p class="astro-6WUT7NEW">As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.</p><p class="astro-6WUT7NEW">This project occassionally receives new feautes when I get to improve it as a piece of work for my university courses.
 </p>
-      <p>Roborally is a turn-based strategic board game. Each player controls one robot, which moves around a factory. The goal of each player is to complete the game course by visiting each of the checkpoints in specified order. Players control the robots by “programming” movement cards into five registers. However, these moves are then executed by all players at once. Moreover, after each move register, various board elements activate and further move and rotate the robots. And order matters - when two robots collide, they push each other and chaos ensues.</p><p>This project was a great experience. Having learned Rust during Advent of Code, I enjoyed solidifying my skills by writing a full project with it. I was also quite happy that this project required more focus on actual game logic, and I didn’t have to work on the visual frontend that much (even though I still ended up bikeshedding the UI slide-in/out animations :) )</p>
+      <p>Roborally is a turn-based strategic board game. Each player controls one robot, which moves around a factory. The goal of each player is to complete the game course by visiting each of the checkpoints in specified order. Players control the robots by “programming” movement cards into five registers. However, these moves are then executed by all players at once. Moreover, after each move register, various board elements activate and further move and rotate the robots. And order matters - when two robots collide, they push each other and chaos ensues.</p>
+<p>This project was a great experience. Having learned Rust during Advent of Code, I enjoyed solidifying my skills by writing a full project with it. I was also quite happy that this project required more focus on actual game logic, and I didn’t have to work on the visual frontend that much (even though I still ended up bikeshedding the UI slide-in/out animations :) )</p>
     </main>
-    <footer class="noprint astro-27MHQCEU">
-      <p class="astro-27MHQCEU">
-        <small class="astro-27MHQCEU">
-          Powered by <a href="https://astro.build/" class="astro-27MHQCEU">Astro</a>; Hosted on GitHub
+    <footer class="noprint astro-6WUT7NEW">
+      <p class="astro-6WUT7NEW">
+        <small class="astro-6WUT7NEW">
+          Powered by <a href="https://astro.build/" class="astro-6WUT7NEW">Astro</a>; Hosted on GitHub
           Pages
         </small>
       </p>
