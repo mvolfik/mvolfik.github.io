@@ -29,7 +29,7 @@ body {
   @return $permuts;
 }
 
-$colors-permutations: permutations([var(--tag-1), var(--tag-2), var(--tag-3) ]);
+$colors-permutations: permutations([var(--tag-1), var(--tag-2), var(--tag-3)]);
 
 @mixin tags($n: 0) {
   $permut: list.nth($colors-permutations, ($n % 6) + 1);

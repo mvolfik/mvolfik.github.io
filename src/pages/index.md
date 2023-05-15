@@ -18,10 +18,8 @@ skills:
   Docker: 3.7
   Python: 3.5
   PostgreSQL: 3.5
-  Heroku: 3.5
   Flask: 3
   SolidJS: 3
-  SQLAlchemy: 3
 jobs:
   - role: Node.js engineer
     company: Apify
