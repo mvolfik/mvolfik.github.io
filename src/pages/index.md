@@ -9,6 +9,9 @@ links:
     href: "https://github.com/mvolfik"
   - name: E-mail
     href: "https://mailhide.io/en/e/8adeL"
+  - name: Mastodon
+    href: "https://chat.mvolfik.com/@matej"
+    rel: me
 skills:
   SvelteJS: 4.5
   JavaScript: 4.5

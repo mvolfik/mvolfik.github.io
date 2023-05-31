@@ -55,8 +55,8 @@ const props = Astro.props.content as Props;
       <p class="profile-links">
         {
           intersperse(
-            props.links.map(({ name, href }) => (
-              <a target="_blank" href={href}>
+            props.links.map(({ name, href, rel }) => (
+              <a target="_blank" href={href} rel={rel}>
                 {name}
               </a>
             )),
