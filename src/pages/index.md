@@ -10,7 +10,7 @@ links:
   - name: E-mail
     href: "https://mailhide.io/en/e/8adeL"
   - name: Mastodon
-    href: "https://chat.mvolfik.com/@matej"
+    href: "https://fosstodon.org/@mvolfik"
     rel: me
 skills:
   SvelteJS: 4.5
