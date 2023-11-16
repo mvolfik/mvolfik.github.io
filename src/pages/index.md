@@ -37,7 +37,7 @@ jobs:
       culture allows me to get maximum insight and learning opportunities at this position.
 ---
 
-Hello! My name is Matěj and I'm from Prague, Czech Republic. I'm currently in the first year
+Hello! My name is Matěj and I'm from Prague, Czech Republic. I'm currently in the second year
 of Bc. in Computer Science at the Faculty of Mathematics and Physics at Charles University.
 I'm also part-time employed at the Czech startup [Apify](https://apify.com) in the role of a
 _Node.js engineer / Web Automation developer_.
