@@ -14,6 +14,7 @@ export interface Props {
   description: string;
 }
 const props = Astro.props.content as Props;
+const isArchive = Astro.props.url.startsWith("/archive/");
 ---
 
 <BaseLayout title={props.name} summary={props.description}>
@@ -36,7 +37,11 @@ const props = Astro.props.content as Props;
       )
     }
     <main>
-      <p class="noprint"><a href="/">&larr; back to homepage</a></p>
+      <p class="noprint">
+        <a href={isArchive ? "/archive" : "/"}
+          >&larr; back to {isArchive ? "archive" : "homepage"}</a
+        >
+      </p>
       <p class="metadata">
         Tags: <span class="tags">
           {
@@ -99,6 +104,10 @@ const props = Astro.props.content as Props;
       border-radius: 0.1em;
       text-align: center;
     }
+  }
+
+  main > :global(p > img) {
+    max-width: 100%;
   }
 
   .metadata {

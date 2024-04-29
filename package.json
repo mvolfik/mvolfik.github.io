@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev --experimental-integrations",
     "build": "astro build --experimental-integrations",
-    "format": "prettier --write --plugin-search-dir . --ignore-path .gitignore"
+    "format": "prettier --write --plugin-search-dir . --ignore-path .gitignore ."
   },
   "devDependencies": {
     "@astrojs/sitemap": "^0.1.2",

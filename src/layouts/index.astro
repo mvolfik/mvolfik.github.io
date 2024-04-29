@@ -139,9 +139,15 @@ const props = Astro.props.content as Props;
           .map(({ frontmatter, url }, i) => (
             <>
               <h4 class:list={[{ noprint: i >= 2 }]}>
-                <a target="_blank" href={frontmatter.links[0].href}>
-                  {frontmatter.name}
-                </a>
+                {frontmatter.links.length ? (
+                  <>
+                    <a target="_blank" href={frontmatter.links[0].href}>
+                      {frontmatter.name}
+                    </a>
+                  </>
+                ) : (
+                  frontmatter.name
+                )}
                 <span class="tags">
                   {intersperse(
                     frontmatter.tags.map((tag) => <span>{tag}</span>),
@@ -177,6 +183,9 @@ const props = Astro.props.content as Props;
             </>
           ))
       }
+      <p style="margin-top: 2rem;">
+        <a href="/archive">Archive of older projects</a>
+      </p>
     </main>
     <footer>
       <p>

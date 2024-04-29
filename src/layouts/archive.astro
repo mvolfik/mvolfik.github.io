@@ -1,0 +1,135 @@
+---
+import BaseLayout from "./Base.astro";
+import type { Props as ProjectProps } from "./project.astro";
+import { intersperse } from "../lib/utils.ts";
+
+export interface Props {
+  title: string;
+  summary: string;
+}
+
+const projects = await Astro.glob<ProjectProps>("../pages/archive/*.md");
+const props = Astro.props.content as Props;
+---
+
+<BaseLayout title={props.title} summary={props.summary}>
+  <div class="wrapper">
+    <h2>Archive</h2>
+    <hr />
+    <main>
+      <p><a href="/">&larr; back to homepage</a></p>
+      <slot />
+
+      {
+        projects
+          .sort(
+            (a, b) =>
+              b.frontmatter.ordering_value - a.frontmatter.ordering_value
+          )
+          .map(({ frontmatter, url }, i) => (
+            <>
+              <h4 class:list={[{ noprint: i >= 2 }]}>
+                <a target="_blank" href={frontmatter.links[0].href}>
+                  {frontmatter.name}
+                </a>
+                <span class="tags">
+                  {intersperse(
+                    frontmatter.tags.map((tag) => <span>{tag}</span>),
+                    ", "
+                  )}
+                </span>
+                <span class="timespan">{frontmatter.timespan}</span>
+              </h4>
+              {frontmatter.description.split(/\n\w*\n/).map((paragraph) => (
+                <p class:list={[{ noprint: i >= 2 }]}>{paragraph}</p>
+              ))}
+              {frontmatter.links.length > 1 || frontmatter.read_more ? (
+                <p class:list={[{ noprint: i >= 2 }]}>
+                  {intersperse(
+                    frontmatter.links.map(({ name, href }) => (
+                      <a target="_blank" href={href}>
+                        {name}
+                      </a>
+                    )),
+                    " | "
+                  )}
+                  {frontmatter.read_more ? (
+                    <>
+                      | <a href={url}>Read more&hellip;</a>
+                    </>
+                  ) : (
+                    ""
+                  )}
+                </p>
+              ) : (
+                ""
+              )}
+            </>
+          ))
+      }
+    </main>
+    <footer>
+      <p>
+        <small>
+          <span class="noprint">
+            Powered by <a target="_blank" href="https://astro.build/">Astro</a>;
+            Hosted on GitHub Pages
+          </span>
+          <span class="printonly">
+            This resume was printed from <a href="https://mvolfik.github.io/"
+              >https://mvolfik.github.io/
+            </a> on {new Date().toLocaleDateString()}
+          </span>
+        </small>
+      </p>
+    </footer>
+  </div>
+</BaseLayout>
+
+<script>
+  document.querySelector("a[href^='https://mailhide.io']").href = atob(
+    "tFWasR3b6gWZsx2bA1mdvxmZptmLj9Wb".split("").reverse().join("")
+  )
+    .split("")
+    .reverse()
+    .join("");
+</script>
+
+<style lang="scss">
+  @use "../lib/tags.scss";
+  @use "sass:list";
+
+  main h4 {
+    .tags,
+    .timespan {
+      white-space: nowrap;
+    }
+
+    @for $i from 0 to 6 {
+      &:nth-of-type(6n + #{$i}) .tags {
+        @include tags.tags($i);
+      }
+
+      &:nth-of-type(6n + #{$i}) {
+        $permut: list.nth(tags.$colors-permutations, ($i % 6) + 1);
+
+        .job-role {
+          color: list.nth($permut, 1);
+        }
+
+        .job-company {
+          color: list.nth($permut, 3);
+        }
+      }
+    }
+  }
+
+  div.wrapper {
+    max-width: 51em;
+    margin: 0 auto;
+  }
+
+  main {
+    margin: 0 1em;
+  }
+</style>
