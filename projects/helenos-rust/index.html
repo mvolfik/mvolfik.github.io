@@ -3,23 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RoboRally</title>
+    <title>Rust for HelenOS</title>
     <link rel="canonical" href="https://mvolfik.github.io/">
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
-    <meta name="description" content="As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.
-
-This project occassionally receives new feautes when I get to improve it as a piece of work for my university courses.
+    <meta name="description" content="As my Individual Software project at Matfyz (and potentially my Bachelor's thesis), I am working on providing support for the HelenOS operating system to the Rust compiler, i.e. allow compiling Rust programs for HelenOS. I am very much in the beginning of this project and there isn't anything that I have to show yet.
 ">
-    <meta property="og:title" content="RoboRally">
+    <meta property="og:title" content="Rust for HelenOS">
     <meta property="og:locale" content="en_US">
-    <meta property="og:description" content="As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.
-
-This project occassionally receives new feautes when I get to improve it as a piece of work for my university courses.
+    <meta property="og:description" content="As my Individual Software project at Matfyz (and potentially my Bachelor's thesis), I am working on providing support for the HelenOS operating system to the Rust compiler, i.e. allow compiling Rust programs for HelenOS. I am very much in the beginning of this project and there isn't anything that I have to show yet.
 ">
     <meta property="og:url" content="https://mvolfik.github.io/">
     <meta property="og:site_name" content="Matěj Volf">
     <meta property="og:type" content="website">
-    <meta property="twitter:title" content="RoboRally">
+    <meta property="twitter:title" content="Rust for HelenOS">
     
   <link rel="stylesheet" href="/assets/archive.62ca9312.css" />
 <link rel="stylesheet" href="/assets/bakatasklist.05aa500c.css" />
@@ -31,19 +27,19 @@ This project occassionally receives new feautes when I get to improve it as a pi
           <style >
     
 
-    .astro-imagetools-picture-88DE6431 {
+    .astro-imagetools-picture-17CA5E99 {
       --opacity: 1;
       --z-index: 0;
     }
 
     
-            .astro-imagetools-picture-88DE6431 img {
+            .astro-imagetools-picture-17CA5E99 img {
               z-index: 1;
               position: relative;
             }
           
 
-    .astro-imagetools-picture-88DE6431::after {
+    .astro-imagetools-picture-17CA5E99::after {
       inset: 0;
       content: "";
       left: 0;
@@ -56,36 +52,36 @@ This project occassionally receives new feautes when I get to improve it as a pi
       z-index: var(--z-index);
     }
   
-        .astro-imagetools-picture-88DE6431 img {
+        .astro-imagetools-picture-17CA5E99 img {
           object-fit: cover;
           object-position: 50% 50%;
         }
 
-        .astro-imagetools-picture-88DE6431::after {
+        .astro-imagetools-picture-17CA5E99::after {
           background-size: cover;
-          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC6ElEQVQokR3QfU8adwDA8XsTy7KHZMuypNkyl6VJk6axS9ds2caTTqGlpTrpqImSClIrUEXCw3FwBweHwP3uDrSCVCxtF3XT2tql7+y7bG/g88dHmg0skJY11FafWnOPTcNkoZilIA5YNl+w4bxkcavO9dgqK2qVpDnkjnPGphihiyFy3SLvjGj0hniUV0gu7z2ShTIl55Ci0cP1JEFwa41l64RfOm9wm28oiV2i1QL+JwmWOkMi9inxRpNIPoNdyZHWVEJKhljBRvLP/kYiV6HcG6NoJhE5T7pt87N4x2Ozzy37L2Y759y3z9kUzyl3+mhiwB/razxMJdlumhRVnd/jUUL1faQpn4/8aopa6yllYwdNjHDbF8yJY0piwHprn3j7kDnrFH/rGKWzR87cZ0M1Udt7NIwWOXtMWRfcE0dIXq+HtccZNHNATbdYaY9xd84otnbJtgeUzAFKexe3c8GSdUxFDMh1BuRbexStAxr1Jsa2QDH3Wdz5G8njdpPIFlGcEVqjR9Y85Hb3H2asd3istxQ6fVzWW0LiiA1jm7RhUbGeEY4neFSooLW6KNVtlhIJfNUDJK/HQzwjI9sHaDVBst7koVpFbneZMc8Ito6Zdt6Tqhv8lFrhgWyQssdE1RKh1Cq71TLFQoap5Ap5q480PeXjUU5l2z78/2RRzjGZXOaBqpASLwm0ToiLP4nKDTylBbJHAlfnPWkxRrFH5A2bsmHSFANuiVOkgN9PJBojtr5JYn2LqjMmU6mRrajovT5Vp4fxdEhcq+HVgqgnNaKGxZazg+oMqXSfkek+J2KfcKN5gRQKhQgE/HjdLoJz85Q6++i6zsxcjGs+nav+BpP+JpNBnWt+A/f8Id9OK1yZKXMztMlsWObXpQZXIjqXb28hhcNh5ufn+Q++c/cuqxsypX6fH+/rfPjVGR9PnPLJxGs+u/yaT7875our53zw9QUfffOKS9fTTHy/xpc/ZLl0Y4PPb0b4F3nYJHcCt3FyAAAAAElFTkSuQmCC");
+          background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAQABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAYHBP/EACQQAAEDAwMFAQEAAAAAAAAAAAECAwUEBhEABxITISIxURRB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAaEQADAQADAAAAAAAAAAAAAAAAAhEBEiEx/9oADAMBAAIRAxEAPwBN2ugrUft6NeuJmh6z7S1IDwSCvCyM9+5/g01Ulg2/NxjkjEQ6EUXl0nXWUBLuFFKuIBKsAj2dSO2tx6OJgaKNrLdYkDSpUlLrroB7kk48Tj3p/Z33iYeCYiYu1WzTcFFXCuUnipRyceH0nU+o92DclmQj24sc1FXdW0bDaG22wjCUDA7pB0ay3jOC47gqZMU/5usEjp8+WMJA94HzRp1syhN70f/Z");
           background-position: 50% 50%;
         }
       </style><picture
     
-    class="astro-imagetools-picture astro-imagetools-picture-88DE6431"
+    class="astro-imagetools-picture astro-imagetools-picture-17CA5E99"
     style="position: relative; display: inline-block; ; width: 100%; height: 100%;"
     ><source
-            srcset="/assets/roborally@320w.12b625ab.webp 320w, /assets/roborally@662w.4955bee0.webp 662w, /assets/roborally@935w.37d777ba.webp 935w, /assets/roborally@1140w.32d9934d.webp 1140w, /assets/roborally@1277w.17c3d2b7.webp 1277w, /assets/roborally@1345w.b8d9db24.webp 1345w"
+            srcset="/assets/404@320w.01d8dd15.webp 320w, /assets/404@607w.27f69f0b.webp 607w, /assets/404@750w.58fc10b9.webp 750w"
             sizes="(min-width: 48.6em ) 48.6em, 100vw"
-            width="1345"
-            height="746"
+            width="750"
+            height="600"
             type="image/webp"
             
           />
 <img
     
-    src="/assets/roborally@1345w.c2ea46d0.png"
+    src="/assets/404@750w.39dadb21.jpeg"
     alt="Cover image"
-    srcset="/assets/roborally@320w.f7781483.png 320w, /assets/roborally@662w.cf48b8f0.png 662w, /assets/roborally@935w.be96c1ce.png 935w, /assets/roborally@1140w.358b4758.png 1140w, /assets/roborally@1277w.b9f47fa3.png 1277w, /assets/roborally@1345w.c2ea46d0.png 1345w"
+    srcset="/assets/404@320w.bf8fc499.jpeg 320w, /assets/404@607w.18530bf5.jpeg 607w, /assets/404@750w.39dadb21.jpeg 750w"
     sizes="(min-width: 48.6em ) 48.6em, 100vw"
-    width="1345"
-    height="746"
+    width="750"
+    height="600"
     loading="eager"
     decoding="async"
     class="astro-imagetools-img"
@@ -94,7 +90,7 @@ This project occassionally receives new feautes when I get to improve it as a pi
   />
   </picture>
 
-          <h1 class="astro-TI7AICCO">RoboRally</h1>
+          <h1 class="astro-TI7AICCO">Rust for HelenOS</h1>
         </div>
     <main class="astro-TI7AICCO">
       <p class="noprint astro-TI7AICCO">
@@ -102,21 +98,16 @@ This project occassionally receives new feautes when I get to improve it as a pi
       </p>
       <p class="metadata astro-TI7AICCO">
         Tags: <span class="tags astro-TI7AICCO">
-          <span class="astro-TI7AICCO">game</span>, <span class="astro-TI7AICCO">web</span>, <span class="astro-TI7AICCO">Svelte</span>, <span class="astro-TI7AICCO">Rust</span>, <span class="astro-TI7AICCO">WebAssembly</span>
+          <span class="astro-TI7AICCO">Rust</span>, <span class="astro-TI7AICCO">Operating System development</span>
         </span>
       </p>
-      <p class="metadata astro-TI7AICCO">Timespan: March – December 2022</p>
+      <p class="metadata astro-TI7AICCO">Timespan: 2024 – present</p>
       <p class="metadata astro-TI7AICCO">
-        <a target="_blank" href="https://roborally.mvolfik.com/" class="astro-TI7AICCO">
-                Play the game online
-              </a> | <a target="_blank" href="https://github.com/mvolfik/roborally/" class="astro-TI7AICCO">
-                View repository
-              </a>
+        
       </p>
-      <p class="astro-TI7AICCO">As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.</p><p class="astro-TI7AICCO">This project occassionally receives new feautes when I get to improve it as a piece of work for my university courses.
+      <p class="astro-TI7AICCO">As my Individual Software project at Matfyz (and potentially my Bachelor&#39;s thesis), I am working on providing support for the HelenOS operating system to the Rust compiler, i.e. allow compiling Rust programs for HelenOS. I am very much in the beginning of this project and there isn&#39;t anything that I have to show yet.
 </p>
-      <p>Roborally is a turn-based strategic board game. Each player controls one robot, which moves around a factory. The goal of each player is to complete the game course by visiting each of the checkpoints in specified order. Players control the robots by “programming” movement cards into five registers. However, these moves are then executed by all players at once. Moreover, after each move register, various board elements activate and further move and rotate the robots. And order matters - when two robots collide, they push each other and chaos ensues.</p>
-<p>This project was a great experience. Having learned Rust during Advent of Code, I enjoyed solidifying my skills by writing a full project with it. I was also quite happy that this project required more focus on actual game logic, and I didn’t have to work on the visual frontend that much (even though I still ended up bikeshedding the UI slide-in/out animations :) )</p>
+      
     </main>
     <footer class="noprint astro-TI7AICCO">
       <p class="astro-TI7AICCO">
