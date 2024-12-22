@@ -91,11 +91,6 @@ a {
     display: none;
   }
   .printonly {
-    display: block;
-  }
-  a:after {
-    content: " [" attr(href) "]";
-    font-weight: normal;
-    font-size: min(0.9em, 1rem);
+    display: initial;
   }
 }

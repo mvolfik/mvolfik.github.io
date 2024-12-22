@@ -8,7 +8,7 @@ export interface Props {
   summary: string;
 }
 
-const projects = await Astro.glob<ProjectProps>("../pages/archive/*.md");
+const projects = await Astro.glob<ProjectProps>("../pages/projects/*.md");
 const props = Astro.props.content as Props;
 ---
 
@@ -17,18 +17,19 @@ const props = Astro.props.content as Props;
     <h2>Archive</h2>
     <hr />
     <main>
-      <p><a href="/">&larr; back to homepage</a></p>
+      <p class="noprint"><a href="/">&larr; back to homepage</a></p>
       <slot />
 
       {
         projects
+          .filter((p) => p.frontmatter.archived)
           .sort(
             (a, b) =>
               b.frontmatter.ordering_value - a.frontmatter.ordering_value
           )
           .map(({ frontmatter, url }, i) => (
             <>
-              <h4 class:list={[{ noprint: i >= 2 }]}>
+              <h4>
                 <a target="_blank" href={frontmatter.links[0].href}>
                   {frontmatter.name}
                 </a>
@@ -41,10 +42,10 @@ const props = Astro.props.content as Props;
                 <span class="timespan">{frontmatter.timespan}</span>
               </h4>
               {frontmatter.description.split(/\n\w*\n/).map((paragraph) => (
-                <p class:list={[{ noprint: i >= 2 }]}>{paragraph}</p>
+                <p set:html={paragraph} />
               ))}
               {frontmatter.links.length > 1 || frontmatter.read_more ? (
-                <p class:list={[{ noprint: i >= 2 }]}>
+                <p>
                   {intersperse(
                     frontmatter.links.map(({ name, href }) => (
                       <a target="_blank" href={href}>
@@ -71,29 +72,15 @@ const props = Astro.props.content as Props;
     <footer>
       <p>
         <small>
-          <span class="noprint">
+          <span>
             Powered by <a target="_blank" href="https://astro.build/">Astro</a>;
             Hosted on GitHub Pages
-          </span>
-          <span class="printonly">
-            This resume was printed from <a href="https://mvolfik.github.io/"
-              >https://mvolfik.github.io/
-            </a> on {new Date().toLocaleDateString()}
           </span>
         </small>
       </p>
     </footer>
   </div>
 </BaseLayout>
-
-<script>
-  document.querySelector("a[href^='https://mailhide.io']").href = atob(
-    "tFWasR3b6gWZsx2bA1mdvxmZptmLj9Wb".split("").reverse().join("")
-  )
-    .split("")
-    .reverse()
-    .join("");
-</script>
 
 <style lang="scss">
   @use "../lib/tags.scss";

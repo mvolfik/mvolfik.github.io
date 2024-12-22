@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/project.astro
+archived: true
 name: Ingress tools
 image: /src/assets/ingress-bg.jpg
 links:

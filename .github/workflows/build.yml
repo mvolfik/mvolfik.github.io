@@ -16,6 +16,14 @@ jobs:
       - name: Install and Build
         run: pnpm install --frozen && pnpm run build
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Build CV
+        run: pip install -r cv/requirements.txt && rendercv render cv/data.yaml && mv rendercv_output/Matěj_Volf_CV.pdf dist/CV-volf-matej.pdf
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:

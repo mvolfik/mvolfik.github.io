@@ -1,6 +1,7 @@
 # build output
 dist/
 .output/
+rendercv_output
 
 # dependencies
 node_modules/

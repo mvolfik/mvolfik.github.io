@@ -12,9 +12,9 @@ export interface Props {
   ordering_value: number;
   tags: Array<string>;
   description: string;
+  archived: boolean;
 }
 const props = Astro.props.content as Props;
-const isArchive = Astro.props.url.startsWith("/archive/");
 ---
 
 <BaseLayout title={props.name} summary={props.description}>
@@ -38,8 +38,8 @@ const isArchive = Astro.props.url.startsWith("/archive/");
     }
     <main>
       <p class="noprint">
-        <a href={isArchive ? "/archive" : "/"}
-          >&larr; back to {isArchive ? "archive" : "homepage"}</a
+        <a href={props.archived ? "/archive" : "/"}
+          >&larr; back to {props.archived ? "archive" : "homepage"}</a
         >
       </p>
       <p class="metadata">
@@ -68,7 +68,7 @@ const isArchive = Astro.props.url.startsWith("/archive/");
       {props.description.split(/\n\w*\n/).map((p) => <p>{p}</p>)}
       <slot />
     </main>
-    <footer class="noprint">
+    <footer>
       <p>
         <small>
           Powered by <a href="https://astro.build/">Astro</a>; Hosted on GitHub

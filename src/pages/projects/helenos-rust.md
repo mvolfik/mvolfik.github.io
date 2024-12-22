@@ -3,11 +3,11 @@ layout: ../../layouts/project.astro
 name: Rust for HelenOS
 image: https://http.cat/404
 links: []
-timespan: 2024 – present
+timespan: May 2024 – present
 ordering_value: 20240301
 tags:
   - Rust
   - Operating System development
 description: |
-  As my Individual Software project at Matfyz (and potentially my Bachelor's thesis), I am working on providing support for the HelenOS operating system to the Rust compiler, i.e. allow compiling Rust programs for HelenOS. I am very much in the beginning of this project and there isn't anything that I have to show yet.
+  As my Bachelor Thesis, I am working on providing support for the <a href="https://www.helenos.org">HelenOS operating system</a> to the Rust compiler, i.e. allow compiling Rust programs for HelenOS. This had me digging in the internals of Rust standard library, LLVM configuration, and requires a deep understanding of the ELF binary format, the linking procedure and generally a very good understanding of concepts used in modern operating systems.
 ---

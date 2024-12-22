@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/project.astro
+archived: true
 name: Bakatasklist
 links:
   - name: View repository
