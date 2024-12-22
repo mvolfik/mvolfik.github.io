@@ -14,7 +14,11 @@ links:
     rel: me
 ---
 
-Hey, I'm Matěj! (Are you looking for <a id="cvclick" href="/CV-volf-matej.pdf" target="_blank">my CV</a>?) I do a lot of different things:
+Hey, I'm Matěj!
+
+Are you looking for <a id="cvclick" href="/CV-volf-matej.pdf" target="_blank">my CV</a>?
+
+I do a lot of different things:
 
 - I'm studying Computer Science (well, mainly just writing my thesis) Charles University, Faculty of Mathematics and Physics
 - This academic year, I also took up a Bachelor's programme in Danish and Finnish philology at the Faculty of Arts

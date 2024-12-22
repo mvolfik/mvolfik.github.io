@@ -143,7 +143,12 @@ const props = Astro.props.content as Props;
     <div>
       <p>Download my CV:</p>
       <ul>
-        <li><a href="/CV-volf-matej.pdf" target="_blank">CV focused on Computer Science</a></li>
+        <li>
+          <a href="/CV-volf-matej.pdf" target="_blank"
+            >CV focused on Computer Science</a
+          >
+        </li>
+      </ul>
     </div>
   </div>
 </BaseLayout>
@@ -157,6 +162,7 @@ const props = Astro.props.content as Props;
     .join("");
 </script>
 
+<!--
 <script>
   const modalBg = document.getElementById("cv-modal-bg");
   document.getElementById("cvclick").addEventListener("click", (e) => {
@@ -164,6 +170,7 @@ const props = Astro.props.content as Props;
     modalBg.style.display = "block";
   });
   modalBg.addEventListener("click", (e) => {
+    if (e.target !== modalBg) return;
     e.preventDefault();
     modalBg.style.display = "none";
   });
@@ -173,6 +180,7 @@ const props = Astro.props.content as Props;
     }
   });
 </script>
+-->
 
 <style lang="scss">
   @use "../lib/tags.scss";

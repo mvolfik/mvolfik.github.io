@@ -15,7 +15,7 @@ cv:
         start_date: 2022-10
         highlights:
           - "**Practical coursework**: Operating Systems, Compilers, Functional Programming, High-Performance and Parallel Software, Advanced C++, Rust"
-          - "Strong foundation in Algorithms and Data Structures, Computer Architecture, Computer Networks, Discrete Mathematics, Probability and Statistics and Linear Algebra"
+          - "Strong foundation in algorithms and data structures, computer architecture, discrete mathematics, probability theory and linear algebra"
           - "**Thesis** *(in progress)*: HelenOS compilation target for Rust programming language."
       - institution: Charles University, Faculty of Arts
         area: \newline Germanic and North European Studies with Specialisation in Danish and Finnish
@@ -30,30 +30,34 @@ cv:
         start_date: 2022-06
         end_date: 2024-09
         highlights:
-          - "Developed **end-to-end solutions for customers' scraping and web automation projects.** Architected and implemented a pipeline for processing large datasets, introduced Redis caching to reduce the amount of network requests."
-          - "Contributed to Apify's **open-source projects**, notably the Crawlee web scraping library. Optimized our Docker images for better build cache utilization and smaller size."
-          - "Pioneered **integration with modern developer tooling**, connected our custom CI with GitHub PR reviews and commit status checks."
+          - "Developed **end-to-end solutions for customers' scraping and web automation projects.** Optimized a large dataset processing pipeline by introducing Redis caching."
+          - "Contributed to Apify's **open-source projects**, notably the Crawlee web scraping library. Optimized Docker images for better build cache utilization and smaller size."
+          - "Pioneered **integration with modern developer tooling**, connected Apify's custom CI with GitHub PR reviews and commit status checks."
     Volunteering Experience:
-      - name: "[Protab](https://www.protab.cz) summer camp"
+      - company: "[Protab](https://www.protab.cz) summer camp"
+        position: Lecturer and Organizer
         start_date: 2023-03
         highlights:
           - "Gave lectures and practicals for high school students about programming, algorithms, hardware principles, networking and other computer science topics."
           - "Prepared an 'Escape room' adventure with the use of microcontrollers and interactive software minigames."
-      - name: "[European Youth Parliament](https://eyp.org)"
+      - company: "[European Youth Parliament](https://eyp.org)"
+        position: "Delegate, Chairperson, Head Organizer"
         start_date: 2018-11
         end_date: 2022-01
         highlights:
-          - "*Delegate* at 3 student-led conferences. Researchd and discussed international affairs, and presented results in front of a General Assembly. Developed strong public speaking skills and teamwork in an international, English-speaking environment."
-          - "*Chairperson* at *2nd Digital National Selection Conference of EYP CZ*. Researched and wrote an Academic Preparation Kit and facilitated the work of a committee of 10 delegates towards consensus on a resolution about e-voting."
-          - "*Head Organizer* of a hybrid (in-person and online) conference for 120 participants. Managed a team of 8 Organizers, supervised the whole project and coordinated preparations with the leaders of the academic, media and jury teams. Showcased leadership and project management skills."
-    Other:
-      - name: Roborally web game
+          - "Participated in a total of 8 student-led conferences in Czechia and abroad. Took on different roles and ultimately became a Head Organizer of a 4-day hybrid (in-person and online) conference for 120 participants."
+          - "Enhanced teamwork, leadership, public speaking, and project management skills in an international setting."
+    Other Projects:
+      - name: Roborally
+        date: "[GitHub repository](https://github.com/mvolfik/roborally)"
         highlights:
-          - "As my high school graduation project, I developed a web-based version of the board game Roborally. The game is written in JavaScript and Rust and uses WebSockets for real-time communication."
-          - "[GitHub repository](https://github.com/mvolfik/roborally)"
-      - name: Selfhosting
+          - "High school graduation project. Browser-based remake of the famous board game."
+          - "Developed a full-stack application using JavaScript and Rust, gained experience with real-time communication using WebSockets."
+      - name: Server Administration
+        date: " "
         highlights:
-          - "I am a fan of open-source software and self-hosting. For my personal use, I am operating a few virtual servers, where I have deployed some custom software of my own as well as well-known open-source services like PostgreSQL database, Grafana monitoring suite or a mail server. I am therefore experienced with containerisation technologies like Docker, Docker compose and other tools used in this space."
+          - "Deployment of custom software and web applications onto a private server, as well as administration of well-known open-source services including PostgreSQL, Grafana monitoring suite, and a mail server."
+          - "Hands-on experience with containerisation technologies, Docker compose, and other tools used in this space."
 
 design:
   theme: classic
@@ -74,17 +78,17 @@ design:
     page:
       top: 2 cm
       bottom: 2 cm
-      left: 1.4 cm
-      right: 1.4 cm
+      left: 1.5 cm
+      right: 1.5 cm
     section_title:
-      top: 0.3 cm
+      top: 0.4 cm
       bottom: 0.2 cm
     entry_area:
       left_and_right: 0 cm
       vertical_between: 0.2 cm
       date_and_location_width: 4.2 cm
     highlights_area:
-      top: 0.05 cm
+      top: 0.08 cm
       left: 0.4 cm
       vertical_between_bullet_points: 0.05 cm
     header:
