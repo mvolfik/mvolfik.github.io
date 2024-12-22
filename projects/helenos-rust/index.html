@@ -5,41 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rust for HelenOS</title>
     <link rel="canonical" href="https://mvolfik.github.io/">
-    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
-    <meta name="description" content="As my Individual Software project at Matfyz (and potentially my Bachelor's thesis), I am working on providing support for the HelenOS operating system to the Rust compiler, i.e. allow compiling Rust programs for HelenOS. I am very much in the beginning of this project and there isn't anything that I have to show yet.
+    <link rel="icon" type="image/jpeg" sizes="64x64" href="/favicon.jpg">
+    <meta name="description" content="As my Bachelor Thesis, I am working on providing support for the <a href=&#34;https://www.helenos.org&#34;>HelenOS operating system</a> to the Rust compiler, i.e. allow compiling Rust programs for HelenOS. This had me digging in the internals of Rust standard library, LLVM configuration, and requires a deep understanding of the ELF binary format, the linking procedure and generally a very good understanding of concepts used in modern operating systems.
 ">
     <meta property="og:title" content="Rust for HelenOS">
     <meta property="og:locale" content="en_US">
-    <meta property="og:description" content="As my Individual Software project at Matfyz (and potentially my Bachelor's thesis), I am working on providing support for the HelenOS operating system to the Rust compiler, i.e. allow compiling Rust programs for HelenOS. I am very much in the beginning of this project and there isn't anything that I have to show yet.
+    <meta property="og:description" content="As my Bachelor Thesis, I am working on providing support for the <a href=&#34;https://www.helenos.org&#34;>HelenOS operating system</a> to the Rust compiler, i.e. allow compiling Rust programs for HelenOS. This had me digging in the internals of Rust standard library, LLVM configuration, and requires a deep understanding of the ELF binary format, the linking procedure and generally a very good understanding of concepts used in modern operating systems.
 ">
     <meta property="og:url" content="https://mvolfik.github.io/">
     <meta property="og:site_name" content="Matěj Volf">
     <meta property="og:type" content="website">
     <meta property="twitter:title" content="Rust for HelenOS">
     
-  <link rel="stylesheet" href="/assets/archive.62ca9312.css" />
-<link rel="stylesheet" href="/assets/bakatasklist.05aa500c.css" />
+  <link rel="stylesheet" href="/assets/archive.ed333554.css" />
+<link rel="stylesheet" href="/assets/bakatasklist.77ae55af.css" />
 <link rel="stylesheet" href="/assets/index.14556dfa.css" /><script type="module" src="/hoisted.3b52a5c3.js"></script></head>
   <body>
-    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).only=t=>{(async()=>await(await t())())()},window.dispatchEvent(new Event("astro:only"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="ZQX3Ii" component-url="/DarkModeSwitch.d6ca769c.js" component-export="default" renderer-url="/client.1fb2ba11.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeSwitch&quot;,&quot;value&quot;:true}"></astro-island>
-    <div class="wrapper astro-TI7AICCO">
-    <div class="banner astro-TI7AICCO">
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).only=t=>{(async()=>await(await t())())()},window.dispatchEvent(new Event("astro:only"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="ZQX3Ii" component-url="/DarkModeSwitch.2a74e848.js" component-export="default" renderer-url="/client.9d62cc40.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeSwitch&quot;,&quot;value&quot;:true}"></astro-island>
+    <div class="wrapper astro-RRHNE237">
+    <div class="banner astro-RRHNE237">
           <style >
     
 
-    .astro-imagetools-picture-17CA5E99 {
+    .astro-imagetools-picture-5C57E0A8 {
       --opacity: 1;
       --z-index: 0;
     }
 
     
-            .astro-imagetools-picture-17CA5E99 img {
+            .astro-imagetools-picture-5C57E0A8 img {
               z-index: 1;
               position: relative;
             }
           
 
-    .astro-imagetools-picture-17CA5E99::after {
+    .astro-imagetools-picture-5C57E0A8::after {
       inset: 0;
       content: "";
       left: 0;
@@ -52,19 +52,19 @@
       z-index: var(--z-index);
     }
   
-        .astro-imagetools-picture-17CA5E99 img {
+        .astro-imagetools-picture-5C57E0A8 img {
           object-fit: cover;
           object-position: 50% 50%;
         }
 
-        .astro-imagetools-picture-17CA5E99::after {
+        .astro-imagetools-picture-5C57E0A8::after {
           background-size: cover;
           background-image: url("data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAQABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAYHBP/EACQQAAEDAwMFAQEAAAAAAAAAAAECAwUEBhEABxITISIxURRB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAaEQADAQADAAAAAAAAAAAAAAAAAhEBEiEx/9oADAMBAAIRAxEAPwBN2ugrUft6NeuJmh6z7S1IDwSCvCyM9+5/g01Ulg2/NxjkjEQ6EUXl0nXWUBLuFFKuIBKsAj2dSO2tx6OJgaKNrLdYkDSpUlLrroB7kk48Tj3p/Z33iYeCYiYu1WzTcFFXCuUnipRyceH0nU+o92DclmQj24sc1FXdW0bDaG22wjCUDA7pB0ay3jOC47gqZMU/5usEjp8+WMJA94HzRp1syhN70f/Z");
           background-position: 50% 50%;
         }
       </style><picture
     
-    class="astro-imagetools-picture astro-imagetools-picture-17CA5E99"
+    class="astro-imagetools-picture astro-imagetools-picture-5C57E0A8"
     style="position: relative; display: inline-block; ; width: 100%; height: 100%;"
     ><source
             srcset="/assets/404@320w.01d8dd15.webp 320w, /assets/404@607w.27f69f0b.webp 607w, /assets/404@750w.58fc10b9.webp 750w"
@@ -90,29 +90,29 @@
   />
   </picture>
 
-          <h1 class="astro-TI7AICCO">Rust for HelenOS</h1>
+          <h1 class="astro-RRHNE237">Rust for HelenOS</h1>
         </div>
-    <main class="astro-TI7AICCO">
-      <p class="noprint astro-TI7AICCO">
-        <a href="/" class="astro-TI7AICCO">&larr; back to homepage</a>
+    <main class="astro-RRHNE237">
+      <p class="noprint astro-RRHNE237">
+        <a href="/" class="astro-RRHNE237">&larr; back to homepage</a>
       </p>
-      <p class="metadata astro-TI7AICCO">
-        Tags: <span class="tags astro-TI7AICCO">
-          <span class="astro-TI7AICCO">Rust</span>, <span class="astro-TI7AICCO">Operating System development</span>
+      <p class="metadata astro-RRHNE237">
+        Tags: <span class="tags astro-RRHNE237">
+          <span class="astro-RRHNE237">Rust</span>, <span class="astro-RRHNE237">Operating System development</span>
         </span>
       </p>
-      <p class="metadata astro-TI7AICCO">Timespan: 2024 – present</p>
-      <p class="metadata astro-TI7AICCO">
+      <p class="metadata astro-RRHNE237">Timespan: May 2024 – present</p>
+      <p class="metadata astro-RRHNE237">
         
       </p>
-      <p class="astro-TI7AICCO">As my Individual Software project at Matfyz (and potentially my Bachelor&#39;s thesis), I am working on providing support for the HelenOS operating system to the Rust compiler, i.e. allow compiling Rust programs for HelenOS. I am very much in the beginning of this project and there isn&#39;t anything that I have to show yet.
+      <p class="astro-RRHNE237">As my Bachelor Thesis, I am working on providing support for the &lt;a href=&quot;https://www.helenos.org&quot;&gt;HelenOS operating system&lt;/a&gt; to the Rust compiler, i.e. allow compiling Rust programs for HelenOS. This had me digging in the internals of Rust standard library, LLVM configuration, and requires a deep understanding of the ELF binary format, the linking procedure and generally a very good understanding of concepts used in modern operating systems.
 </p>
       
     </main>
-    <footer class="noprint astro-TI7AICCO">
-      <p class="astro-TI7AICCO">
-        <small class="astro-TI7AICCO">
-          Powered by <a href="https://astro.build/" class="astro-TI7AICCO">Astro</a>; Hosted on GitHub
+    <footer class="astro-RRHNE237">
+      <p class="astro-RRHNE237">
+        <small class="astro-RRHNE237">
+          Powered by <a href="https://astro.build/" class="astro-RRHNE237">Astro</a>; Hosted on GitHub
           Pages
         </small>
       </p>
