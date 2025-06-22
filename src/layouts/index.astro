@@ -3,6 +3,7 @@ import BaseLayout from "./Base.astro";
 import type { Props as ProjectProps } from "./project.astro";
 import { intersperse } from "../lib/utils.ts";
 import { Picture } from "astro-imagetools/components";
+import { marked } from "marked";
 
 export interface Props {
   title: string;
@@ -68,7 +69,9 @@ const props = Astro.props.content as Props;
     <main>
       <p class="printonly" style="font-size: 1.2em; color: red;">
         Hey, did you really want to print this page? Maybe you wanted to
-        download my CV from <a href="/cv">mvolfik.com/cv</a>?
+        download my CV from <a href="/s/CV-volf-matej.pdf"
+          >mvolfik.com/s/CV-volf-matej.pdf</a
+        >?
       </p>
       <slot />
 
@@ -82,15 +85,7 @@ const props = Astro.props.content as Props;
           .map(({ frontmatter, url }, i) => (
             <>
               <h4>
-                {frontmatter.links.length ? (
-                  <>
-                    <a target="_blank" href={frontmatter.links[0].href}>
-                      {frontmatter.name}
-                    </a>
-                  </>
-                ) : (
-                  frontmatter.name
-                )}
+                {frontmatter.name}
                 <span class="tags">
                   {intersperse(
                     frontmatter.tags.map((tag) => <span>{tag}</span>),
@@ -99,9 +94,7 @@ const props = Astro.props.content as Props;
                 </span>
                 <span class="timespan">{frontmatter.timespan}</span>
               </h4>
-              {frontmatter.description.split(/\n\w*\n/).map((paragraph) => (
-                <p set:html={paragraph} />
-              ))}
+              <p set:html={marked.parse(frontmatter.description)} />
               {frontmatter.links.length > 1 || frontmatter.read_more ? (
                 <p>
                   {intersperse(
@@ -144,7 +137,7 @@ const props = Astro.props.content as Props;
       <p>Download my CV:</p>
       <ul>
         <li>
-          <a href="/CV-volf-matej.pdf" target="_blank"
+          <a href="/s/CV-volf-matej.pdf" target="_blank"
             >CV focused on Computer Science</a
           >
         </li>
@@ -240,6 +233,19 @@ const props = Astro.props.content as Props;
   }
 
   main h4 {
+    color: #267cb9;
+    .timespan {
+      color: #494949;
+    }
+
+    html.dark & {
+      color: rgb(70, 153, 211) !important;
+
+      .timespan {
+        color: rgb(176, 170, 161) !important;
+      }
+    }
+
     .tags,
     .timespan {
       white-space: nowrap;

@@ -15,6 +15,7 @@
     "astro": "^1.9.2",
     "astro-imagetools": "^0.8.1",
     "fast-glob": "^3.3.2",
+    "marked": "^15.0.12",
     "prettier": "^2.8.8",
     "prettier-plugin-astro": "0.8.1",
     "sass": "^1.83.0",

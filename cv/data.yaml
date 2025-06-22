@@ -13,10 +13,11 @@ cv:
         area: \newline Computer Science with Specialisation in System Programming
         degree: BSc.
         start_date: 2022-10
+        end_date: 2025-06
         highlights:
           - "**Practical coursework**: Operating Systems, Compilers, Functional Programming, High-Performance and Parallel Software, Advanced C++, Rust"
-          - "Strong foundation in algorithms and data structures, computer architecture, discrete mathematics, probability theory and linear algebra"
-          - "**Thesis** *(in progress)*: HelenOS compilation target for Rust programming language."
+          - "Strong foundation in algorithms and data structures, computer architecture, discrete mathematics, probability theory, linear algebra and others"
+          - "**Thesis**: HelenOS compilation target for the Rust programming language. Defended in June 2025 with grade Excellent."
       - institution: Charles University, Faculty of Arts
         area: \newline Germanic and North European Studies with Specialisation in Danish and Finnish
         degree: BSc.
@@ -31,7 +32,7 @@ cv:
         end_date: 2024-09
         highlights:
           - "Developed **end-to-end solutions for customers' scraping and web automation projects.** Optimized a large dataset processing pipeline by introducing Redis caching."
-          - "Contributed to Apify's **open-source projects**, notably the Crawlee web scraping library. Optimized Docker images for better build cache utilization and smaller size."
+          - "Contributed to Apify's **open-source projects**, notably the Crawlee web scraping library. Optimized Docker images for better build cache utilisation and smaller size."
           - "Pioneered **integration with modern developer tooling**, connected Apify's custom CI with GitHub PR reviews and commit status checks."
     Volunteering Experience:
       - company: "[Protab](https://www.protab.cz) summer camp"
@@ -67,12 +68,10 @@ design:
   color: "#004090"
   disable_external_link_icons: false
   disable_page_numbering: true
-  page_numbering_style: NAME - Page PAGE_NUMBER of TOTAL_PAGES
   disable_last_updated_date: false
-  last_updated_date_style: Last updated in TODAY
   header_font_size: 20 pt
   text_alignment: justified
-  seperator_between_connections: "||"
+  separator_between_connections: "||"
   use_icons_for_connections: true
   margins:
     page:
@@ -99,3 +98,5 @@ design:
 locale_catalog:
   phone_number_format: international
   date_style: "MONTH_ABBREVIATION YEAR"
+  page_numbering_style: NAME - Page PAGE_NUMBER of TOTAL_PAGES
+  last_updated_date_style: Last updated in TODAY
