@@ -1,131 +1,17 @@
-<!DOCTYPE html>
-<html lang="en-US" class="dark">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RoboRally</title>
-    <link rel="canonical" href="https://mvolfik.github.io/">
-    <link rel="icon" type="image/jpeg" sizes="64x64" href="/favicon.jpg">
-    <meta name="description" content="As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.
+<!DOCTYPE html><html lang="en-US" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>RoboRally</title><link rel="canonical" href="https://mvolfik.github.io/"><link rel="icon" type="image/jpeg" sizes="64x64" href="/favicon.jpg"><meta name="description" content="As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.
 
 This project occassionally receives new feautes when I get to improve it as a piece of work for my university courses.
-">
-    <meta property="og:title" content="RoboRally">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:description" content="As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.
+"><meta property="og:title" content="RoboRally"><meta property="og:locale" content="en_US"><meta property="og:description" content="As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.
 
 This project occassionally receives new feautes when I get to improve it as a piece of work for my university courses.
-">
-    <meta property="og:url" content="https://mvolfik.github.io/">
-    <meta property="og:site_name" content="Matěj Volf">
-    <meta property="og:type" content="website">
-    <meta property="twitter:title" content="RoboRally">
-    
-  <link rel="stylesheet" href="/assets/archive.ed333554.css" />
-<link rel="stylesheet" href="/assets/bakatasklist.77ae55af.css" />
-<link rel="stylesheet" href="/assets/index.14556dfa.css" /><script type="module" src="/hoisted.3b52a5c3.js"></script></head>
-  <body>
-    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).only=t=>{(async()=>await(await t())())()},window.dispatchEvent(new Event("astro:only"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="ZQX3Ii" component-url="/DarkModeSwitch.2a74e848.js" component-export="default" renderer-url="/client.9d62cc40.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeSwitch&quot;,&quot;value&quot;:true}"></astro-island>
-    <div class="wrapper astro-RRHNE237">
-    <div class="banner astro-RRHNE237">
-          <style >
-    
-
-    .astro-imagetools-picture-A7D7A23C {
-      --opacity: 1;
-      --z-index: 0;
-    }
-
-    
-            .astro-imagetools-picture-A7D7A23C img {
-              z-index: 1;
-              position: relative;
-            }
-          
-
-    .astro-imagetools-picture-A7D7A23C::after {
-      inset: 0;
-      content: "";
-      left: 0;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      pointer-events: none;
-      transition: opacity 1s;
-      opacity: var(--opacity);
-      z-index: var(--z-index);
-    }
-  
-        .astro-imagetools-picture-A7D7A23C img {
-          object-fit: cover;
-          object-position: 50% 50%;
-        }
-
-        .astro-imagetools-picture-A7D7A23C::after {
-          background-size: cover;
-          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC6ElEQVQokR3QfU8adwDA8XsTy7KHZMuypNkyl6VJk6axS9ds2caTTqGlpTrpqImSClIrUEXCw3FwBweHwP3uDrSCVCxtF3XT2tql7+y7bG/g88dHmg0skJY11FafWnOPTcNkoZilIA5YNl+w4bxkcavO9dgqK2qVpDnkjnPGphihiyFy3SLvjGj0hniUV0gu7z2ShTIl55Ci0cP1JEFwa41l64RfOm9wm28oiV2i1QL+JwmWOkMi9inxRpNIPoNdyZHWVEJKhljBRvLP/kYiV6HcG6NoJhE5T7pt87N4x2Ozzy37L2Y759y3z9kUzyl3+mhiwB/razxMJdlumhRVnd/jUUL1faQpn4/8aopa6yllYwdNjHDbF8yJY0piwHprn3j7kDnrFH/rGKWzR87cZ0M1Udt7NIwWOXtMWRfcE0dIXq+HtccZNHNATbdYaY9xd84otnbJtgeUzAFKexe3c8GSdUxFDMh1BuRbexStAxr1Jsa2QDH3Wdz5G8njdpPIFlGcEVqjR9Y85Hb3H2asd3istxQ6fVzWW0LiiA1jm7RhUbGeEY4neFSooLW6KNVtlhIJfNUDJK/HQzwjI9sHaDVBst7koVpFbneZMc8Ito6Zdt6Tqhv8lFrhgWyQssdE1RKh1Cq71TLFQoap5Ap5q480PeXjUU5l2z78/2RRzjGZXOaBqpASLwm0ToiLP4nKDTylBbJHAlfnPWkxRrFH5A2bsmHSFANuiVOkgN9PJBojtr5JYn2LqjMmU6mRrajovT5Vp4fxdEhcq+HVgqgnNaKGxZazg+oMqXSfkek+J2KfcKN5gRQKhQgE/HjdLoJz85Q6++i6zsxcjGs+nav+BpP+JpNBnWt+A/f8Id9OK1yZKXMztMlsWObXpQZXIjqXb28hhcNh5ufn+Q++c/cuqxsypX6fH+/rfPjVGR9PnPLJxGs+u/yaT7875our53zw9QUfffOKS9fTTHy/xpc/ZLl0Y4PPb0b4F3nYJHcCt3FyAAAAAElFTkSuQmCC");
-          background-position: 50% 50%;
-        }
-      </style><picture
-    
-    class="astro-imagetools-picture astro-imagetools-picture-A7D7A23C"
-    style="position: relative; display: inline-block; ; width: 100%; height: 100%;"
-    ><source
-            srcset="/assets/roborally@320w.12b625ab.webp 320w, /assets/roborally@662w.4955bee0.webp 662w, /assets/roborally@935w.37d777ba.webp 935w, /assets/roborally@1140w.32d9934d.webp 1140w, /assets/roborally@1277w.17c3d2b7.webp 1277w, /assets/roborally@1345w.b8d9db24.webp 1345w"
-            sizes="(min-width: 48.6em ) 48.6em, 100vw"
-            width="1345"
-            height="746"
-            type="image/webp"
-            
-          />
-<img
-    
-    src="/assets/roborally@1345w.c2ea46d0.png"
-    alt="Cover image"
-    srcset="/assets/roborally@320w.f7781483.png 320w, /assets/roborally@662w.cf48b8f0.png 662w, /assets/roborally@935w.be96c1ce.png 935w, /assets/roborally@1140w.358b4758.png 1140w, /assets/roborally@1277w.b9f47fa3.png 1277w, /assets/roborally@1345w.c2ea46d0.png 1345w"
-    sizes="(min-width: 48.6em ) 48.6em, 100vw"
-    width="1345"
-    height="746"
-    loading="eager"
-    decoding="async"
-    class="astro-imagetools-img"
-    style="display: inline-block; overflow: hidden; vertical-align: middle; ; width: 100%; height: 100%;"
-    onload="parentElement.style.setProperty('--z-index', 1); parentElement.style.setProperty('--opacity', 0);"
-  />
-  </picture>
-
-          <h1 class="astro-RRHNE237">RoboRally</h1>
-        </div>
-    <main class="astro-RRHNE237">
-      <p class="noprint astro-RRHNE237">
-        <a href="/" class="astro-RRHNE237">&larr; back to homepage</a>
-      </p>
-      <p class="metadata astro-RRHNE237">
-        Tags: <span class="tags astro-RRHNE237">
-          <span class="astro-RRHNE237">game</span>, <span class="astro-RRHNE237">web</span>, <span class="astro-RRHNE237">Svelte</span>, <span class="astro-RRHNE237">Rust</span>, <span class="astro-RRHNE237">WebAssembly</span>
-        </span>
-      </p>
-      <p class="metadata astro-RRHNE237">Timespan: March – December 2022</p>
-      <p class="metadata astro-RRHNE237">
-        <a target="_blank" href="https://roborally.mvolfik.com/" class="astro-RRHNE237">
-                Play the game online
-              </a> | <a target="_blank" href="https://github.com/mvolfik/roborally/" class="astro-RRHNE237">
-                View repository
-              </a>
-      </p>
-      <p class="astro-RRHNE237">As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.</p><p class="astro-RRHNE237">This project occassionally receives new feautes when I get to improve it as a piece of work for my university courses.
-</p>
-      <p>Roborally is a turn-based strategic board game. Each player controls one robot, which moves around a factory. The goal of each player is to complete the game course by visiting each of the checkpoints in specified order. Players control the robots by “programming” movement cards into five registers. However, these moves are then executed by all players at once. Moreover, after each move register, various board elements activate and further move and rotate the robots. And order matters - when two robots collide, they push each other and chaos ensues.</p>
-<p>This project was a great experience. Having learned Rust during Advent of Code, I enjoyed solidifying my skills by writing a full project with it. I was also quite happy that this project required more focus on actual game logic, and I didn’t have to work on the visual frontend that much (even though I still ended up bikeshedding the UI slide-in/out animations :) )</p>
-    </main>
-    <footer class="astro-RRHNE237">
-      <p class="astro-RRHNE237">
-        <small class="astro-RRHNE237">
-          Powered by <a href="https://astro.build/" class="astro-RRHNE237">Astro</a>; Hosted on GitHub
+"><meta property="og:url" content="https://mvolfik.github.io/"><meta property="og:site_name" content="Matěj Volf"><meta property="og:type" content="website"><meta property="twitter:title" content="RoboRally"><script type="module">function i(e,t){if(window.location.hostname==="localhost"||localStorage.getItem("plausible_ignore")==="true")return;const n={name:e,url:window.location.href,domain:"mvolfik.github.io",referrer:document.referrer||null,screen_width:window.innerWidth};t&&(n.props=JSON.stringify(t)),navigator.sendBeacon("https://an.evavolfova.cz/api/event",JSON.stringify(n))}i("pageview");document.addEventListener("click",e=>{if(e.target.href===void 0)return;const t=new URL(e.target.href);t.origin!==window.location.origin&&i("Outbound Link: Click",{url:t.toString()})});document.querySelectorAll("a").forEach(e=>{const t=e.lastChild;t.nodeType===Node.TEXT_NODE&&(t.textContent=t.textContent.trimEnd())});</script><link rel="stylesheet" href="/_astro/archive.CA-rTeZm.css">
+<style>body{--tag-1: #099812;--tag-2: #096698;--tag-3: #980980}.wrapper[data-astro-cid-6vkduold]{max-width:50em;margin:0 auto}.banner[data-astro-cid-6vkduold]{margin:calc(-1 * var(--outer-top-margin)) calc(-1 * var(--outer-margin)) 1em;height:min(50vh,20em);position:relative}.banner[data-astro-cid-6vkduold] img{max-width:100%;max-height:100%;object-fit:cover}.banner[data-astro-cid-6vkduold] h1[data-astro-cid-6vkduold]{position:absolute;z-index:5;left:50%;top:55%;transform:translate(-50%,-50%);background-color:var(--bg-lightly-transparent);color:var(--fg-high-contrast);font-variant:small-caps;padding:.6em 1em;border-radius:.1em;text-align:center}main[data-astro-cid-6vkduold]>p img{max-width:100%;height:auto}.metadata[data-astro-cid-6vkduold]{font-size:1.15em}.tags[data-astro-cid-6vkduold]{font-weight:400;font-variant:small-caps;margin:0 .5em}.tags[data-astro-cid-6vkduold]>span[data-astro-cid-6vkduold]:nth-of-type(n){color:var(--tag-3)}.tags[data-astro-cid-6vkduold]>span[data-astro-cid-6vkduold]:nth-of-type(odd){color:var(--tag-2)}.tags[data-astro-cid-6vkduold]>span[data-astro-cid-6vkduold]:nth-of-type(3n+1){color:var(--tag-1)}
+._switchLabel_zxb4a_1{display:block;position:absolute;top:1.5em;right:3em;z-index:99;background-color:var(--bg-lightly-transparent);color:var(--fg-high-contrast);padding:.3em .6em .3em .3em;border-radius:.2em;cursor:pointer}@media not print{html.dark ._switchLabel_zxb4a_1{color:#fff}}@media not screen{._switchLabel_zxb4a_1{display:none}}
+</style></head> <body> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="swvlo" component-url="/_astro/DarkModeSwitch.myvWb0OF.js" component-export="default" renderer-url="/_astro/client.CJc7N0Z8.js" props="{}" ssr client="only" opts="{&quot;name&quot;:&quot;DarkModeSwitch&quot;,&quot;value&quot;:true}"></astro-island>  <div class="wrapper" data-astro-cid-6vkduold> <div class="banner" data-astro-cid-6vkduold> <picture data-astro-cid-6vkduold="true"> <source srcset="/_astro/roborally.DNBvyWBy_ZFzvCh.webp 640w, /_astro/roborally.DNBvyWBy_ZCrahg.webp 750w, /_astro/roborally.DNBvyWBy_Z1WQQKy.webp 828w, /_astro/roborally.DNBvyWBy_Z2n8TKb.webp 1080w, /_astro/roborally.DNBvyWBy_19voi7.webp 1280w" type="image/webp" sizes="(min-width: 48.6em) 48.6em, 100vw">  <img src="/_astro/roborally.DNBvyWBy_Z2ij64D.png" srcset="/_astro/roborally.DNBvyWBy_1W5VRP.png 640w, /_astro/roborally.DNBvyWBy_20eidQ.png 750w, /_astro/roborally.DNBvyWBy_ENAJy.png 828w, /_astro/roborally.DNBvyWBy_Z25fJ2z.png 1080w, /_astro/roborally.DNBvyWBy_1roz0I.png 1280w" alt="Cover image" loading="eager" sizes="(min-width: 48.6em) 48.6em, 100vw" data-astro-cid-6vkduold="true" decoding="async" fetchpriority="auto" style="--fit: cover; --pos: center;" data-astro-image="full-width" width="1345" height="746"> </picture> <h1 data-astro-cid-6vkduold>RoboRally</h1> </div> <main data-astro-cid-6vkduold> <p class="noprint" data-astro-cid-6vkduold> <a href="/" data-astro-cid-6vkduold>&larr; back to homepage</a> </p> <p class="metadata" data-astro-cid-6vkduold>
+Tags: <span class="tags" data-astro-cid-6vkduold> <span data-astro-cid-6vkduold>game</span>, <span data-astro-cid-6vkduold>web</span>, <span data-astro-cid-6vkduold>Svelte</span>, <span data-astro-cid-6vkduold>Rust</span>, <span data-astro-cid-6vkduold>WebAssembly</span> </span> </p> <p class="metadata" data-astro-cid-6vkduold>Timespan: March – December 2022</p> <p class="metadata" data-astro-cid-6vkduold> <a target="_blank" href="https://roborally.mvolfik.com/" data-astro-cid-6vkduold> Play the game online </a> | <a target="_blank" href="https://github.com/mvolfik/roborally/" data-astro-cid-6vkduold> View repository </a> </p> <p data-astro-cid-6vkduold><p>As my high school graduation project, I recreated the board game RoboRally as a multiplayer online game. This included a backend written in Rust, WebSocket transport layer, Rust compiled to WebAssembly for game state deserialization and a highly interactive Svelte frontend.</p>
+<p>This project occassionally receives new feautes when I get to improve it as a piece of work for my university courses.</p>
+</p> <p>Roborally is a turn-based strategic board game. Each player controls one robot, which moves around a factory. The goal of each player is to complete the game course by visiting each of the checkpoints in specified order. Players control the robots by “programming” movement cards into five registers. However, these moves are then executed by all players at once. Moreover, after each move register, various board elements activate and further move and rotate the robots. And order matters - when two robots collide, they push each other and chaos ensues.</p>
+<p>This project was a great experience. Having learned Rust during Advent of Code, I enjoyed solidifying my skills by writing a full project with it. I was also quite happy that this project required more focus on actual game logic, and I didn’t have to work on the visual frontend that much (even though I still ended up bikeshedding the UI slide-in/out animations :) )</p> </main> <footer data-astro-cid-6vkduold> <p data-astro-cid-6vkduold> <small data-astro-cid-6vkduold>
+Powered by <a href="https://astro.build/" data-astro-cid-6vkduold>Astro</a>; Hosted on GitHub
           Pages
-        </small>
-      </p>
-    </footer>
-  </div>
-  </body></html>
-
+</small> </p> </footer> </div>  </body></html> 
