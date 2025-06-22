@@ -1,7 +1,5 @@
 ---
-layout: ../../layouts/project.astro
 name: Rust for HelenOS
-image:
 links:
   - name: Full thesis text
     href: /s/b-thesis.pdf
@@ -31,4 +29,4 @@ intel-hda -device hda-duplex -serial stdio -boot d \
 
 The following Rust applications are installed in the system: `rtest` (a test suite), [`chksum`](https://github.com/chksum-rs/cli), [`resvg`](https://github.com/linebender/resvg), [`imagecli`](https://github.com/theotherphil/imagecli), [`imageviewer-rs`](https://github.com/mvolfik/helenos-iced-apps) and [`life`](https://github.com/mvolfik/helenos-iced-apps).
 
-![Project poster](/src/assets/b-poster.png)
+![Project poster](../../assets/b-poster.png)

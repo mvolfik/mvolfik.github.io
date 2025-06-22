@@ -1,7 +1,6 @@
 ---
 layout: ../layouts/index.astro
 title: Matěj Volf
-image: /src/assets/me.jpg
 summary: |
   Student of Computer Science at MFF UK | Part-time Node.js engineer at Apify
 links:

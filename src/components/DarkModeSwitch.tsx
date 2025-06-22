@@ -6,7 +6,7 @@ function DarkModeSwitch() {
   const [dark, setDark] = createSignal(
     stored === null
       ? window.matchMedia("(prefers-color-scheme: dark)").matches
-      : stored === "dark"
+      : stored === "dark",
   );
 
   createEffect(() => {

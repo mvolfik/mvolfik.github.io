@@ -1,16 +1,16 @@
 ---
 import BaseLayout from "./Base.astro";
-import type { Props as ProjectProps } from "./project.astro";
 import { intersperse } from "../lib/utils.ts";
 import { marked } from "marked";
+import { getCollection } from "astro:content";
 
-export interface Props {
+interface Frontmatter {
   title: string;
   summary: string;
 }
 
-const projects = await Astro.glob<ProjectProps>("../pages/projects/*.md");
-const props = Astro.props.content as Props;
+const projects = await getCollection("projects");
+const props = Astro.props.content as Frontmatter;
 ---
 
 <BaseLayout title={props.title} summary={props.summary}>
@@ -23,39 +23,36 @@ const props = Astro.props.content as Props;
 
       {
         projects
-          .filter((p) => p.frontmatter.archived)
-          .sort(
-            (a, b) =>
-              b.frontmatter.ordering_value - a.frontmatter.ordering_value
-          )
-          .map(({ frontmatter, url }, i) => (
+          .filter((p) => p.data.archived)
+          .sort((a, b) => b.data.ordering_value - a.data.ordering_value)
+          .map(({ data, slug }, i) => (
             <>
               <h4>
-                <a target="_blank" href={frontmatter.links[0].href}>
-                  {frontmatter.name}
+                <a target="_blank" href={data.links[0].href}>
+                  {data.name}
                 </a>
                 <span class="tags">
                   {intersperse(
-                    frontmatter.tags.map((tag) => <span>{tag}</span>),
-                    ", "
+                    data.tags.map((tag) => <span>{tag}</span>),
+                    ", ",
                   )}
                 </span>
-                <span class="timespan">{frontmatter.timespan}</span>
+                <span class="timespan">{data.timespan}</span>
               </h4>
-              <p set:html={marked.parse(frontmatter.description)} />
-              {frontmatter.links.length > 1 || frontmatter.read_more ? (
+              <p set:html={marked.parse(data.description)} />
+              {data.links.length > 1 || data.read_more ? (
                 <p>
                   {intersperse(
-                    frontmatter.links.map(({ name, href }) => (
+                    data.links.map(({ name, href }) => (
                       <a target="_blank" href={href}>
                         {name}
                       </a>
                     )),
-                    " | "
+                    " | ",
                   )}
-                  {frontmatter.read_more ? (
+                  {data.read_more ? (
                     <>
-                      | <a href={url}>Read more&hellip;</a>
+                      | <a href={`/projects/${slug}/`}>Read more&hellip;</a>
                     </>
                   ) : (
                     ""

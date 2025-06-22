@@ -1,15 +1,16 @@
 ---
 import BaseLayout from "./Base.astro";
-import type { Props as ProjectProps } from "./project.astro";
 import { intersperse } from "../lib/utils.ts";
-import { Picture } from "astro-imagetools/components";
+import { Picture } from "astro:assets";
 import { marked } from "marked";
+import { getCollection } from "astro:content";
+import portrait from "../assets/me.jpg";
 
-export interface Props {
+interface Frontmatter {
   title: string;
   image: string;
   summary: string;
-  links: Array<{ name: string; href: string }>;
+  links: { name: string; href: string; rel?: string }[];
   skills: Record<string, number>;
   jobs: Array<{
     role: string;
@@ -20,8 +21,8 @@ export interface Props {
   }>;
 }
 
-const projects = await Astro.glob<ProjectProps>("../pages/projects/*.md");
-const props = Astro.props.content as Props;
+const projects = await getCollection("projects");
+const props = Astro.props.content as Frontmatter;
 ---
 
 <BaseLayout title={props.title} summary={props.summary}>
@@ -30,10 +31,9 @@ const props = Astro.props.content as Props;
       <h1><a href="https://mvolfik.github.io/">Matěj Volf</a></h1>
       <div style="max-width: 20em; margin: 0 auto;">
         <Picture
-          src={props.image}
+          src={portrait}
           alt="Portrait"
-          format={["webp"]}
-          loading="eager"
+          formats={["webp"]}
           sizes="40em"
         />
       </div>
@@ -61,7 +61,7 @@ const props = Astro.props.content as Props;
                 {name}
               </a>
             )),
-            " | "
+            " | ",
           )
         }
       </p>
@@ -77,37 +77,34 @@ const props = Astro.props.content as Props;
 
       {
         projects
-          .filter((p) => !p.frontmatter.archived)
-          .sort(
-            (a, b) =>
-              b.frontmatter.ordering_value - a.frontmatter.ordering_value
-          )
-          .map(({ frontmatter, url }, i) => (
+          .filter((p) => !p.data.archived)
+          .sort((a, b) => b.data.ordering_value - a.data.ordering_value)
+          .map(({ data, slug }, i) => (
             <>
               <h4>
-                {frontmatter.name}
+                {data.name}
                 <span class="tags">
                   {intersperse(
-                    frontmatter.tags.map((tag) => <span>{tag}</span>),
-                    ", "
+                    data.tags.map((tag) => <span>{tag}</span>),
+                    ", ",
                   )}
                 </span>
-                <span class="timespan">{frontmatter.timespan}</span>
+                <span class="timespan">{data.timespan}</span>
               </h4>
-              <p set:html={marked.parse(frontmatter.description)} />
-              {frontmatter.links.length > 1 || frontmatter.read_more ? (
+              <p set:html={marked.parse(data.description)} />
+              {data.links.length > 1 || data.read_more ? (
                 <p>
                   {intersperse(
-                    frontmatter.links.map(({ name, href }) => (
+                    data.links.map(({ name, href }) => (
                       <a target="_blank" href={href}>
                         {name}
                       </a>
                     )),
-                    " | "
+                    " | ",
                   )}
-                  {frontmatter.read_more ? (
+                  {data.read_more ? (
                     <>
-                      | <a href={url}>Read more&hellip;</a>
+                      | <a href={`/projects/${slug}/`}>Read more&hellip;</a>
                     </>
                   ) : (
                     ""
@@ -147,8 +144,10 @@ const props = Astro.props.content as Props;
 </BaseLayout>
 
 <script>
-  document.querySelector("a[href^='https://mailhide.io']").href = atob(
-    "tFWasR3b6gWZsx2bA1mdvxmZptmLj9Wb".split("").reverse().join("")
+  document.querySelector<HTMLAnchorElement>(
+    "a[href^='https://mailhide.io']",
+  )!.href = atob(
+    "tFWasR3b6gWZsx2bA1mdvxmZptmLj9Wb".split("").reverse().join(""),
   )
     .split("")
     .reverse()
@@ -281,6 +280,12 @@ const props = Astro.props.content as Props;
     /* overriden on wide: */
     max-width: 30em;
     text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.1rem;
+    }
   }
 
   @media (max-width: 30em) {

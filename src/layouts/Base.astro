@@ -1,8 +1,8 @@
 ---
 import "@fontsource/open-sans/400.css";
 import "@fontsource/open-sans/700.css";
-import DarkModeSwitch from "../components/DarkModeSwitch.tsx";
-import "./global.scss";
+import DarkModeSwitch from "../components/DarkModeSwitch.jsx";
+import "../lib/global.scss";
 
 export interface Props {
   title: string;
@@ -11,7 +11,7 @@ export interface Props {
 const props = Astro.props as Props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US" class="dark">
   <head>
     <meta charset="UTF-8" />
@@ -30,9 +30,9 @@ const props = Astro.props as Props;
     <script>
       import "../lib/tracker.ts";
       document.querySelectorAll("a").forEach((e) => {
-        const lastChild = e.lastChild;
+        const lastChild = e.lastChild!;
         if (lastChild.nodeType === Node.TEXT_NODE) {
-          lastChild.textContent = lastChild.textContent.trimEnd();
+          lastChild.textContent = lastChild.textContent!.trimEnd();
         }
       });
     </script>

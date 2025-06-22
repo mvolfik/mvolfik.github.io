@@ -1,8 +1,7 @@
 ---
-layout: ../../layouts/project.astro
 archived: true
 name: Evavolfova.cz
-image: /src/assets/evavolfova.jpg
+image: ../../assets/evavolfova.jpg
 links:
   - name: View the website
     href: https://www.evavolfova.cz/

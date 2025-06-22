@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/project.astro
 archived: true
 name: Python mailmerge
 links:

@@ -15,7 +15,7 @@ function sendEvent(name: string, props?: Record<string, string>) {
   if (props) payload.props = JSON.stringify(props);
   navigator.sendBeacon(
     "https://an.evavolfova.cz/api/event",
-    JSON.stringify(payload)
+    JSON.stringify(payload),
   );
 }
 

@@ -1,21 +1,20 @@
 ---
-import BaseLayout from "./Base.astro";
-import { intersperse } from "../lib/utils.ts";
-import { Picture } from "astro-imagetools/components";
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/Base.astro";
+import { intersperse } from "../../lib/utils.ts";
+import { Picture } from "astro:assets";
 import { marked } from "marked";
 
-export interface Props {
-  name: string;
-  image?: string;
-  links: Array<{ name: string; href: string }>;
-  read_more?: boolean;
-  timespan: string;
-  ordering_value: number;
-  tags: Array<string>;
-  description: string;
-  archived: boolean;
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { project: project.slug },
+    props: project,
+  }));
 }
-const props = Astro.props.content as Props;
+
+const props = Astro.props.data;
+const { Content } = await Astro.props.render();
 ---
 
 <BaseLayout title={props.name} summary={props.description}>
@@ -24,12 +23,12 @@ const props = Astro.props.content as Props;
       props.image ? (
         <div class="banner">
           <Picture
-            src={props.image}
+            src={props.image!}
             alt="Cover image"
-            format={["webp"]}
+            formats={["webp"]}
             loading="eager"
-            layout="fill"
-            sizes="(min-width: 48.6em ) 48.6em, 100vw"
+            layout="full-width"
+            sizes="(min-width: 48.6em) 48.6em, 100vw"
           />
           <h1>{props.name}</h1>
         </div>
@@ -48,7 +47,7 @@ const props = Astro.props.content as Props;
           {
             intersperse(
               props.tags.map((tag) => <span>{tag}</span>),
-              ", "
+              ", ",
             )
           }
         </span>
@@ -62,12 +61,12 @@ const props = Astro.props.content as Props;
                 {name}
               </a>
             )),
-            " | "
+            " | ",
           )
         }
       </p>
       <p set:html={marked.parse(props.description)} />
-      <slot />
+      <Content />
     </main>
     <footer>
       <p>
@@ -81,7 +80,7 @@ const props = Astro.props.content as Props;
 </BaseLayout>
 
 <style lang="scss">
-  @use "../lib/tags.scss";
+  @use "../../lib/tags.scss";
   .wrapper {
     max-width: 50em;
     margin: 0 auto;
@@ -91,6 +90,12 @@ const props = Astro.props.content as Props;
       1em;
     height: min(50vh, 20em);
     position: relative;
+
+    & :global(img) {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
 
     h1 {
       position: absolute;
@@ -107,8 +112,9 @@ const props = Astro.props.content as Props;
     }
   }
 
-  main > :global(p > img) {
+  main > :global(p img) {
     max-width: 100%;
+    height: auto;
   }
 
   .metadata {

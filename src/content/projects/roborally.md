@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/project.astro
 name: RoboRally
 image: /src/assets/roborally.png
 links:
