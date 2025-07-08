@@ -1,9 +1,8 @@
 cv:
   name: Matěj Volf
-  location: Prague, Czechia
+  location: Prague, CZ / Copenhagen, DK
   email: matej@mvolfik.com
   phone: tel:+420 778 259 280
-  website: https://mvolfik.github.io
   social_networks:
     - network: GitHub
       username: mvolfik
@@ -18,18 +17,12 @@ cv:
           - "**Practical coursework**: Operating Systems, Compilers, Functional Programming, High-Performance and Parallel Software, Advanced C++, Rust"
           - "Strong foundation in algorithms and data structures, computer architecture, discrete mathematics, probability theory, linear algebra and others"
           - "**Thesis**: HelenOS compilation target for the Rust programming language. Defended in June 2025 with grade Excellent."
-      - institution: Charles University, Faculty of Arts
-        area: \newline Germanic and North European Studies with Specialisation in Danish and Finnish
-        degree: BSc.
-        start_date: 2024-10
-        highlights:
-          - "**Coursework**: Danish and Finnish language, linguistics, literature and history"
     Work Experience:
       - company: Apify
         position: Web Automation Developer / Node.js Engineer *(part-time)*
         location: Prague, Czechia
         start_date: 2022-06
-        end_date: 2024-09
+        end_date: 2025-06
         highlights:
           - "Developed **end-to-end solutions for customers' scraping and web automation projects.** Optimized a large dataset processing pipeline by introducing Redis caching."
           - "Contributed to Apify's **open-source projects**, notably the Crawlee web scraping library. Optimized Docker images for better build cache utilisation and smaller size."
@@ -46,7 +39,7 @@ cv:
         start_date: 2018-11
         end_date: 2022-01
         highlights:
-          - "Participated in a total of 8 student-led conferences in Czechia and abroad. Took on different roles and ultimately became a Head Organizer of a 4-day hybrid (in-person and online) conference for 120 participants."
+          - "Participated in a total of 8 student-led conferences in Czechia and abroad and organized a 4-day conference for 120 participants."
           - "Enhanced teamwork, leadership, public speaking, and project management skills in an international setting."
     Other Projects:
       - name: Roborally
@@ -59,6 +52,12 @@ cv:
         highlights:
           - "Deployment of custom software and web applications onto a private server, as well as administration of well-known open-source services including PostgreSQL, Grafana monitoring suite, and a mail server."
           - "Hands-on experience with containerisation technologies, Docker compose, and other tools used in this space."
+    Skills:
+      - "High level of proficiency with all the technologies listed below. Minor experience with many other technologies, ability to quickly adapt and learn new tools, especially if they are similar to those already known."
+      - "**Programming languages**: Rust, JavaScript, TypeScript, Python, C++"
+      - "**Databases**: SQL (PostgreSQL, SQLite), Redis, MongoDB"
+      - "**Others**: Git, Docker, Linux, Grafana, Web Technologies (React, Svelte, Solid.js, Node.js)"
+      - "**Security**: Winner of [Czech Cybersecurity Competition 2025](https://kybersoutez.cz), knowledgeable in cryptography, web security and other topics."
 
 design:
   theme: classic

@@ -1,0 +1,267 @@
+\documentclass[11pt, a4paper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=1.1 cm, % seperation between body and page edge from the left
+    right=1.5 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage[explicit]{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 64, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Matěj Volf's CV},
+    pdfauthor={Matěj Volf},
+    pdfcreator={LaTeX},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+\usepackage{graphicx} % for the profile picture
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\pagenumbering{gobble} % no page numbering
+
+\titleformat{\section}{
+    % avoid page braking right after the section title
+    \needspace{4\baselineskip}
+    % make the font size of the section title large and color it with the primary color
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    % print bold title, give 0.15 cm space and draw a line of 0.8 pt thickness
+    % from the end of the title to the end of the body
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[] % section title formatting
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.4 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+% \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.08 cm,
+        parsep=0.05 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.5 cm
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-1.5 cm-0 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Naposledy aktualizováno: leden 2025}\hspace{\widthof{Naposledy aktualizováno: leden 2025}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+
+    \begin{header}
+        \fontsize{20 pt}{20 pt}
+        \textbf{Matěj Volf}
+
+        \vspace{0.2 cm}
+
+        \normalsize
+        \mbox{\hrefWithoutArrow{mailto:matej@mvolfik.com}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}matej@mvolfik.com}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+420-778-259-280}{{\footnotesize\faPhone*}\hspace*{0.13cm}+420 778 259 280}}%
+    \end{header}
+    \vspace{0.5 cm}
+
+\newenvironment{mysection}[2][]{
+    \vspace{0.4 cm}
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+    \setcolumnwidth{3.6 cm, 0.3 cm, \fill}
+    \begin{paracol}{3}
+    \raggedleft
+    \large\color{primaryColor}\textbf{#2}\normalsize\color{black}
+    \switchcolumn
+    \switchcolumn
+    \raggedright
+}{
+    \end{paracol}
+    \end{adjustwidth}
+} % new environment for two column entries
+
+        % \begin{threecolentry}{\textbf{}}{
+        %     září 2014 – červen 2022
+        % }
+        %     \textbf{Gymnázium Pierra de Coubertina Tábor}, \newline Osmileté všeobecné gymnázium
+        %     \begin{highlights}
+        %         \item Aktivní účast na oborových soutěžích v matematice, zeměpisná olympiáda, lingvistická olympiáda
+        %     \end{highlights}
+        % \end{threecolentry}
+
+\newcommand{\educationheader}[1]{
+    \raggedleft
+    #1
+
+    \vspace{-0.48 cm}
+    \raggedright
+}
+
+    \begin{mysection}{Vzdělání}
+        \educationheader{od října 2024}
+        \textbf{Filozofická fakulta Univerzity Karlovy}
+
+        \textbf{Bc.}, obor Germánská a severoevropská studia
+        \begin{itemize}[
+            topsep=0pt,
+            parsep=0pt,
+            partopsep=0pt,
+            itemsep=0pt,
+            % no bullet
+            label={}
+        ]
+            \item Skandinavistika se zaměřením na dánštinu
+            \item Finština
+        \end{itemize}
+
+        \begin{highlights}
+            \item výuka obou jazyků rodilými mluvčími
+            \item vzdělání v literatuře, kultuře a historii obou severských regionů
+        \end{highlights}
+
+        \vspace{0.4 cm}
+
+        \educationheader{2022 -- 2025}
+        \textbf{Matematicko-fyzikální fakulta Univerzity Karlovy}
+
+        \textbf{Bc.}, obor Informatika
+
+        \begin{highlights}
+            \item očekávané dokončení v červnu 2025
+        \end{highlights}
+
+        \vspace{0.4 cm}
+
+        \educationheader{2014 -- 2022}
+        \textbf{Gymnázium Pierra de Coubertina v Táboře}
+
+        Všeobecné osmileté gymnázium
+
+        \begin{highlights}
+            \item Aktivní účast na oborových soutěžích v matematice, zeměpisné olympiádě a lingvistické olympiádě
+        \end{highlights}
+    \end{mysection}
+
+    \begin{mysection}{Dobrovolnictví}
+        \educationheader{2018 -- 2021}
+        \textbf{\href{https://eyp.org}{European Youth Parliament}}
+
+        \begin{highlights}
+            \item Účast na celkem 8 studentských konferencích v Česku i zahraničí
+            \begin{itemize}[leftmargin=7pt, topsep=0pt]
+                \item debata v komisích nad evropskými tématy, představení závěrů na valném shromáždění, pohotové zodpovídání dotazů a kritiky
+                \item celý program probíhá v anglickém jazyce
+            \end{itemize}
+            \vspace{4pt}
+            \item Vedoucí komise na 2. Digitální národní konferenci EPM v ČR
+            \begin{itemize}[leftmargin=7pt, topsep=0pt]
+                \item vypracování akademické přípravy a úvodu do tématu elektronických voleb
+                \item facilitace skupiny 12 delegátů ke konsenzu na rezoluci
+            \end{itemize}
+            \vspace{4pt}
+            \item Hlavní organizátor 10. Regionální výběrové konference EPM v ČR -- Třebíč 2021
+            \begin{itemize}[leftmargin=7pt, topsep=0pt]
+                \item kompletní organizace čtyřdenní hybridní (prezenční a online) konference pro 90~účastníků
+                \item vedoucí týmu 8 organizátorů
+            \end{itemize}
+            \vspace{4pt}
+            \item Rozvoj schopností práce v týmu, leadershipu, veřejného vystupování a projektového řízení v mezinárodním, anglicky mluvícím prostředí
+        \end{highlights}
+
+        \vspace{0.4 cm}
+
+        \educationheader{od března 2023}
+        \textbf{Programátorský tábor \href{https://protab.cz}{Protab}}
+
+        Lektor a organizátor letního tábora pro středoškoláky
+    \end{mysection}
+
+    \begin{mysection}{Jazykové schopnosti}
+            \vspace{0.45 cm}
+            \textbf{angličtina} (C2 certifikát), \textbf{němčina} (B1)
+    \end{mysection}
+
+
+    \begin{mysection}{Zájmy}
+        IT, sport, urbanismus a městská cyklistika, politika a společenské dění
+    \end{mysection}
+
+\end{document}

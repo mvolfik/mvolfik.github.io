@@ -3,8 +3,8 @@
 % Packages:
 \usepackage[
     ignoreheadfoot, % set margins without considering header and footer
-    top=2 cm, % seperation between body and page edge from the top
-    bottom=2 cm, % seperation between body and page edge from the bottom
+    top=1.5 cm, % seperation between body and page edge from the top
+    bottom=1.5 cm, % seperation between body and page edge from the bottom
     left=1.5 cm, % seperation between body and page edge from the left
     right=1.5 cm, % seperation between body and page edge from the right
     footskip=1.0 cm, % seperation between body and footer
@@ -71,10 +71,10 @@
     -1pt
 }{
     % top space:
-    0.4 cm
+    0.2 cm
 }{
     % bottom space:
-    0.2 cm
+    0.1 cm
 } % section title spacing
 
 % \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
@@ -148,7 +148,7 @@
         \LenToUnit{\paperwidth-1.5 cm-0 cm+0.05cm},
         \LenToUnit{\paperheight-1.0 cm}
     ){\vtop{{\null}\makebox[0pt][c]{
-        \small\color{gray}\textit{Last updated in June 2025}\hspace{\widthof{Last updated in June 2025}}
+        \small\color{gray}\textit{Last updated in July 2025}\hspace{\widthof{Last updated in July 2025}}
     }}}%
   }%
 }%
@@ -180,15 +180,15 @@
     \sbox\ANDbox{||}
 
     \placelastupdatedtext
-    \vspace*{-0.5 cm}
+    \vspace*{-0.4 cm}
     \begin{header}
         \fontsize{20 pt}{20 pt}
         \textbf{Matěj Volf}
 
-        \vspace{0.2 cm}
+        \vspace{0.1 cm}
 
         \normalsize
-        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Prague, Czechia}%
+        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Prague, CZ / Copenhagen, DK}%
         \kern 0.25 cm%
         \AND%
         \kern 0.25 cm%
@@ -200,14 +200,11 @@
         \kern 0.25 cm%
         \AND%
         \kern 0.25 cm%
-        \mbox{\hrefWithoutArrow{https://mvolfik.github.io/}{{\footnotesize\faLink}\hspace*{0.13cm}mvolfik.github.io}}%
-        \kern 0.25 cm%
-        \AND%
-        \kern 0.25 cm%
         \mbox{\hrefWithoutArrow{https://github.com/mvolfik}{{\footnotesize\faGithub}\hspace*{0.13cm}mvolfik}}%
     \end{header}
 
     \vspace{0.3 cm - 0.4 cm}
+    \vspace{0.1 cm}
 
 
     \section{Education}
@@ -226,6 +223,8 @@
             \end{highlights}
         \end{threecolentry}
 
+
+    
     \section{Work Experience}
 
 
@@ -270,7 +269,7 @@
         }
             \textbf{\href{https://eyp.org}{European Youth Parliament}}, Delegate, Chairperson, Head Organizer
             \begin{highlights}
-                \item Participated in a total of 8 student-led conferences in Czechia and abroad. Took on different roles and ultimately became a Head Organizer of a 4-day hybrid (in-person and online) conference for 120 participants.
+                \item Participated in a total of 8 student-led conferences in Czechia and abroad and organized a 4-day conference for 120 participants.
                 \item Enhanced teamwork, leadership, public speaking, and project management skills in an international setting.
             \end{highlights}
         \end{twocolentry}
@@ -306,6 +305,41 @@
             \end{highlights}
         \end{twocolentry}
 
+
+
+    
+    \section{Skills}
+
+
+
+        
+        \begin{onecolentry}
+            High level of proficiency with all the technologies listed below. Minor experience with many other technologies, ability to quickly adapt and learn new tools, especially if they are similar to those already known.
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Programming languages}: Rust, JavaScript, TypeScript, Python, C++
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Databases}: SQL (PostgreSQL, SQLite, MySQL), Redis, MongoDB
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Others}: Git, Docker, Linux, Grafana, Web Technologies (React, Svelte, Solid.js, Node.js, WebSockets, WebAssembly)
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Security}: Winner of \href{https://kybersoutez.cz}{Czech Cybersecurity Competition 2025}, knowledgeable in cryptography, web security and other topics.
+        \end{onecolentry}
 
 
     
