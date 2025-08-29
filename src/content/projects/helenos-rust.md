@@ -29,4 +29,9 @@ intel-hda -device hda-duplex -serial stdio -boot d \
 
 The following Rust applications are installed in the system: `rtest` (a test suite), [`chksum`](https://github.com/chksum-rs/cli), [`resvg`](https://github.com/linebender/resvg), [`imagecli`](https://github.com/theotherphil/imagecli), [`imageviewer-rs`](https://github.com/mvolfik/helenos-iced-apps) and [`life`](https://github.com/mvolfik/helenos-iced-apps).
 
+Relevant code links:
+  - [full set of changes to `rustc` and Rust standard library](https://github.com/rust-lang/rust/compare/master...mvolfik:rust:helenos)
+  - [contributions to HelenOS](https://github.com/HelenOS/helenos/pulls?q=is%3Apr+author%3Amvolfik+)
+  - [HelenOS runtime for Iced + two GUI apps](https://github.com/mvolfik/helenos-iced-apps)
+
 ![Project poster](../../assets/b-poster.png)
