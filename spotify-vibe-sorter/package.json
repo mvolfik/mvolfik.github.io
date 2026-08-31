@@ -1,0 +1,21 @@
+{
+  "name": "spotify-vibe-sorter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch": "tsx src/cli.ts fetch",
+    "classify": "tsx src/cli.ts classify",
+    "report": "tsx src/cli.ts report",
+    "apply": "tsx src/cli.ts apply"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

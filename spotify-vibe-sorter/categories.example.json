@@ -1,0 +1,18 @@
+[
+  {
+    "name": "fast beats",
+    "description": "High-energy, uptempo, driving rhythm. Good for workouts or hyping up."
+  },
+  {
+    "name": "melancholic",
+    "description": "Sad, wistful, slow, introspective mood."
+  },
+  {
+    "name": "indie pop",
+    "description": "Indie/alt-pop guitar or synth bands, quirky, mid-tempo."
+  },
+  {
+    "name": "my fav hits",
+    "description": "Personal all-time favorites / comfort songs I'd put on any mixtape, regardless of genre."
+  }
+]
